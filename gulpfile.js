@@ -24,24 +24,29 @@ const terser = require('gulp-terser');
 
 // tasks
 // подготовка css
-gulp.task("styling", () => {
-  return gulp.src([
+gulp.task("styling", (done) => {
+  gulp.src([
       "./source/normalize/normalize.css",
       "./source/sass/variables.scss",
       "./source/sass/style.scss",
       "./source/sass/mixins.scss",
       "./source/sass/blocks/**/*.scss"
-  ], { allowEmpty: true })
+    ], {
+      allowEmpty: true
+    })
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(concat("style.min.scss"))
-    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }))
     .pipe(autoprefixer())
     .pipe(cleanCSS())
     .pipe(sourcemaps.write("./"))
     .pipe(plumber.stop())
     .pipe(gulp.dest("./build/css"))
     .pipe(browserSync.stream());
+  done();
 });
 
 // Копирование
@@ -68,7 +73,7 @@ gulp.task("svg-sprite", () => {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("./build/img"))
+    .pipe(gulp.dest("./build/img"));
 });
 
 // обработка html
@@ -90,7 +95,7 @@ gulp.task("browser-sync", () => {
     server: {
       baseDir: "./build"
     }
-  })
+  });
 });
 
 
@@ -101,8 +106,8 @@ gulp.task("browser-sync", () => {
 
 // IMGs
 // images processing в source
-gulp.task("images", () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+gulp.task("images", (done) => {
+  gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({
         optimizationLevel: 3
@@ -112,16 +117,18 @@ gulp.task("images", () => {
       }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("./source/img"));
+  done();
 });
 
 // преобразуем необходимые изображения в webp в source
-gulp.task("webp", () => {
-  return gulp.src("source/img/**/*.{png,jpg}")
+gulp.task("webp", (done) => {
+  gulp.src("./source/img/**/*.{png,jpg}")
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("./source/img"));
+  done();
 });
 
 
@@ -147,7 +154,7 @@ gulp.task("webp", () => {
 
 // JS
 gulp.task("scripts", () => {
-  return gulp.src("source/js/**/*.js")
+  return gulp.src("./source/js/**/*.js")
     .pipe(sourcemaps.init())
     .pipe(concat("scripts.js"))
     .pipe(terser())
@@ -156,7 +163,7 @@ gulp.task("scripts", () => {
       suffix: ".min"
     }))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("./build/js"));
 });
 
 
@@ -172,6 +179,7 @@ gulp.task("serve", () => {
   });
 
   gulp.watch("./source/sass/**/*.scss", gulp.series("styling"));
+  gulp.watch("./source/js/**/*.js", gulp.series("scripts"));
   gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
 });
 

@@ -1,26 +1,42 @@
-.main-nav--closed {
-  display: none;
+.main-nav {
+  display: block;
+  width: 100%;
 }
 
-.main-nav--opened {
+.main-nav-list {
+  margin: 0;
+
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  margin-left: -40px; // т.к. <ul>
 }
 
-.main-nav__toggle {
-  border: none;
+.main-nav-list__item {
+  font-family: $font-family-medium;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bolder;
+  font-style: normal;
+  text-transform: uppercase;
+  list-style-type: none;
 
-  background-color: transparent;
-  background-image: url(../../img/nav-closed.svg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  width: 25px;
-  height: 20px;
-
-  // fill: $nav;
+  border-bottom: 1px solid #e6e6e6;
 }
 
-.main-nav--opened .main-nav__toggle {
-  background-image: url(../../img/nav-opened.svg);
+.main-nav-list__item a {
+  display: block;
+
+  text-decoration: none;
+  color: $font-dark;
+
+  min-height: 43px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  text-align: center;
+  padding-top: 23px;
 }
