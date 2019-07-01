@@ -1,0 +1,30 @@
+.address {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 115px;
+
+  background-color: $bg-primary;
+}
+
+.address__call {
+  color: $font-dark;
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+
+  padding: 15px;
+}
+
+.address__text {
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+
+  padding: 15px;
+}

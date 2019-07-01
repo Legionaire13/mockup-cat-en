@@ -1,0 +1,21 @@
+.copyright {
+  display: flex;
+
+  align-items: center;
+}
+
+.copyright__link {
+  color: $font;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 35px;
+
+  fill: #666666;
+}

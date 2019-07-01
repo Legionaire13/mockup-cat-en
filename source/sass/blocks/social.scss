@@ -1,0 +1,42 @@
+.social {
+  display: flex;
+  justify-content: center;
+
+  min-height: 65px;
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 50%;
+
+  margin-left: -40px;
+}
+
+.social__item {
+  list-style-type: none;
+}
+
+.social__link {
+  display: block;
+
+  width: 25px;
+  height: 20px;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &--vk {
+    background-image: url(../../img/icon-vk.svg);
+  }
+
+  &--inst {
+    background-image: url(../../img/icon-inst.svg);
+  }
+
+  &--fb {
+    background-image: url(../../img/icon-fb.svg);
+  }
+}

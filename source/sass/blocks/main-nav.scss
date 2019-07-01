@@ -1,0 +1,26 @@
+.main-nav--closed {
+  display: none;
+}
+
+.main-nav--opened {
+  display: flex;
+}
+
+.main-nav__toggle {
+  border: none;
+
+  background-color: transparent;
+  background-image: url(../../img/nav-closed.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 25px;
+  height: 20px;
+
+  // fill: $nav;
+}
+
+.main-nav--opened .main-nav__toggle {
+  background-image: url(../../img/nav-opened.svg);
+}

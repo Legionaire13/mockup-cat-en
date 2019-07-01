@@ -1,0 +1,27 @@
+.example {
+  background-color: $bg-secondary;
+}
+
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 385px;
+
+  margin: 0 auto;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.example__headline {
+  color: $font-dark;
+  font-family: $font-family;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: normal;
+  font-style: normal;
+
+  margin-top: 18px;
+  margin-bottom: 10px;
+}

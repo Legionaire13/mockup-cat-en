@@ -1,0 +1,74 @@
+.table {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 10px;
+  margin-bottom: 17px;
+
+  background-color: $bg-secondary;
+}
+
+.table tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+  max-width: 285px;
+}
+
+.table__data {
+  text-align: center;
+}
+
+.table__nums {
+  color: $font-dark;
+  font-family: $font-family;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+
+  display: block;
+  padding: 12px;
+
+  min-width: 122px;
+  min-height: 55px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 1px;
+
+  box-sizing: border-box;
+}
+
+.table__text {
+  font-size: 12px;
+  line-height: 12px;
+
+  display: inline-block;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-top: -9px;
+  margin-right: -2px;
+
+  background-color: $bg-secondary;
+}
+
+.table__total {
+  color: $font-dark;
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  flex-basis: 100%;
+}

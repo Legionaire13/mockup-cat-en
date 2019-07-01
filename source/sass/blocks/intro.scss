@@ -1,0 +1,61 @@
+.intro {
+  margin: 20px;
+  max-width: 425px;
+  margin: 0 auto;
+}
+
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+  text-align: center;
+
+  color: $font-light;
+  background: url(../../img/index-bg-mobile.jpg) no-repeat 50% 0%;
+  background-size: contain;
+}
+
+.intro__headline {
+  color: $font-light;
+  font-family: $font-family;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+  font-style: normal;
+
+  margin-top: 27px;
+}
+
+.intro__call {
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.intro__product {
+  margin-top: 30px;
+}
+
+.intro__link {
+  color: $font-light;
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+
+  background: $bg-others;
+  text-decoration: none;
+
+  min-width: 260px;
+  max-width: 425px;
+  height: 20px;
+  padding: 10px;
+  margin-top: 2px;
+}
