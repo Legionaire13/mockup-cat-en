@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+
+  max-width: 425px;
 }
 
 .page-header__wrapper {
@@ -14,8 +16,6 @@
 
   min-height: 66px;
 
-  margin-left: -10px;
-
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -23,7 +23,7 @@
   border: none;
 
   background-color: transparent;
-  background-position: 0 0;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -31,8 +31,6 @@
   height: 20px;
 
   cursor: pointer;
-
-  // fill: $nav;
 }
 
 .page-header__nav-mobile--opened .page-header__nav-mobile {
