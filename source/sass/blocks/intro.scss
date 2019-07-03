@@ -1,5 +1,4 @@
 .intro {
-  margin: 20px;
   max-width: 425px;
   margin: 0 auto;
 }
@@ -57,7 +56,73 @@
 
   min-width: 260px;
   max-width: 425px;
-  height: 20px;
+  min-height: 20px;
   padding: 10px;
   margin-top: 2px;
+}
+
+
+
+@media screen and (min-width: $tablet-width) {
+
+  .intro {
+    padding-left: 120px;
+    padding-right: 60px;
+    margin: 0;
+
+    max-width: 768px;
+    min-height: 845px;
+  }
+
+  .intro__wrapper {
+    align-items: flex-start;
+    position: relative;
+
+    background: none;
+
+    color: $font-dark;
+  }
+
+  .intro__headline {
+    color: $font-dark;
+    text-align: left;
+    width: 440px;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    order: -1;
+  }
+
+  .intro__call {
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+
+    order: -1;
+  }
+
+  .intro__product {
+    position: absolute;
+    margin-top: -50px;
+    
+    max-width: 709px;
+    max-height: 609px;
+
+    z-index: -1;
+  }
+
+  .intro__link {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-top: 50px;
+    padding-top: 15px;
+
+    min-width: 245px;
+    min-height: 25px;
+
+    order: -1;
+  }
+
 }
