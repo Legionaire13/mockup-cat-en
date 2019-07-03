@@ -50,19 +50,19 @@
 }
 
   &--first::before {
-    background-image: url(../../img/advantage-1.png);
+    background-image: url(../img/advantage-1.png);
   }
 
   &--second::before {
-    background-image: url(../../img/advantage-2.png);
+    background-image: url(../img/advantage-2.png);
   }
 
   &--third::before {
-    background-image: url(../../img/advantage-3.png);
+    background-image: url(../img/advantage-3.png);
   }
 
   &--fourth::before {
-    background-image: url(../../img/advantage-4.png);
+    background-image: url(../img/advantage-4.png);
   }
 }
 

@@ -1,32 +1,29 @@
 .main-nav {
-  display: block;
   width: 100%;
 }
 
 .main-nav-list {
   margin: 0;
+  padding: 0;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-
-  margin-left: -40px; // т.к. <ul>
 }
 
 .main-nav-list__item {
-  font-family: $font-family-medium;
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: bolder;
-  font-style: normal;
-  text-transform: uppercase;
   list-style-type: none;
-
-  border-bottom: 1px solid #e6e6e6;
 }
 
 .main-nav-list__item a {
+  font-family: $font-family-medium;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+
   display: block;
 
   text-decoration: none;
@@ -39,4 +36,45 @@
 
   text-align: center;
   padding-top: 23px;
+}
+
+
+
+//      mobile width only
+@media screen and (max-width: 767px) {
+
+  .main-nav-list__item {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+}
+
+
+
+//      tablet
+@media screen and (min-width: $tablet-width) {
+
+  .main-nav {
+    width: 440px;
+  }
+
+  .main-nav-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-nav-list__item a {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    padding-top: 13px;
+    min-height: 33px;
+  }
+
+  .main-nav-list__item--active a {
+    border-bottom: 2px solid $bg-others;
+  }
+
 }
