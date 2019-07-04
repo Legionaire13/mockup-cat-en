@@ -71,7 +71,7 @@
   margin-left: 71px;
 }
 
-.program__ref {
+.program__link {
   color: $font-dark;
   font-family: $font-family;
   font-size: 16px;
@@ -102,10 +102,107 @@
   }
 }
 
-.program__txt {
+.program__text {
   display: block;
   max-width: 300px;
 
   margin-top: 5px;
   margin-bottom: 30px;
+}
+
+
+
+
+
+//      tablet
+@media screen and (min-width: $tablet-width) {
+
+  .program {
+    padding: 51px; //pp
+    padding-left: 52px; // pp
+    padding-bottom: 30px; // pp
+    min-height: 292px;
+
+    margin-top: 30px;
+
+    &--loss::after,
+    &--gain::after {
+      top: 91px;
+      left: 447px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--loss::before {
+      top: 80px;
+      left: 477px;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    &--gain::before {
+      top: 135px;
+      left: 412px;
+
+      width: 268px;
+      height: 112px;
+    }
+
+  }
+
+  .program-wrapper {
+    max-width: 748px;
+  }
+
+  .program__name {
+    font-size: 36px;
+    line-height: 36px;
+
+    margin-left: 1px; // pp
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .program__text {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-top: 6px;
+
+    max-width: 370px;
+  }
+
+  .program--loss .program__text{
+    max-width: 375px;
+  }
+
+  .program--gain .program__text{
+    max-width: 344px;
+  }
+
+
+
+  .program__link {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-top: 26px;
+
+    &::after {
+      left: 131px;
+      top: 5px;
+    }
+  }
+
+  // поправка на pp и кривой макет
+  .program--gain .program__link::after {
+    left: 126px;
+  }
+
+  .program .divider {
+    display: none;
+  }
+
 }
