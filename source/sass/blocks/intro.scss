@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
 
-  margin: 0 auto;
+  // margin: 0 auto;
   text-align: center;
 
   color: $font-light;
@@ -62,21 +62,22 @@
 }
 
 
-
+//       tablet
 @media screen and (min-width: $tablet-width) {
 
   .intro {
-    padding-left: 120px;
-    padding-right: 60px;
-    margin: 0;
-
     max-width: 768px;
-    min-height: 845px;
+    min-height: 832px;
+
+    margin-left: -1px; // pp
   }
 
   .intro__wrapper {
     align-items: flex-start;
     position: relative;
+
+    padding-left: 120px;
+    padding-right: 60px;
 
     background: none;
 
@@ -91,6 +92,8 @@
     font-size: 60px;
     line-height: 60px;
 
+    margin-left: -2px; //pp
+
     order: -1;
   }
 
@@ -104,8 +107,9 @@
 
   .intro__product {
     position: absolute;
-    margin-top: -50px;
-    
+    top: 197px;
+    left: 30px;
+
     max-width: 709px;
     max-height: 609px;
 
@@ -116,11 +120,12 @@
     font-size: 20px;
     line-height: 20px;
 
-    margin-top: 50px;
+    margin-top: 48px;
     padding-top: 15px;
+    padding-left: 9px; // pp
 
-    min-width: 245px;
-    min-height: 25px;
+    min-width: 225px;
+    min-height: 27px;
 
     order: -1;
   }
