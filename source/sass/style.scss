@@ -71,3 +71,12 @@ h6 {
   border: none;
   opacity: 0.1;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  .tablet-only {
+    display: block;
+    width: 100%;
+  }
+
+}
