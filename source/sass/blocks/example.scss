@@ -6,8 +6,8 @@
   display: flex;
   flex-direction: column;
 
+  min-width: 280px;
   max-width: 385px;
-
   margin: 0 auto;
 
   padding-left: 20px;
@@ -24,4 +24,37 @@
 
   margin-top: 18px;
   margin-bottom: 10px;
+}
+
+
+
+//      tablet
+@media screen and (min-width: 768px) {
+
+  .example {
+    background-color: $bg-primary;
+  }
+
+  .example__wrapper {
+    margin: 30px;
+    padding-left: 0;
+    padding-right: 0;
+
+    max-width: 708px;
+  }
+
+  .example__headline {
+    font-size: 60px;
+
+    margin-top: 14px;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+
+    max-width: 700px;
+    margin-top: 55px;
+  }
+
 }
