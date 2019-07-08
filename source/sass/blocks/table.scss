@@ -5,27 +5,30 @@
   // max-width: 300px;
   margin: 0 auto;
   margin-top: 10px;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
+
+  text-align: center;
 }
 
 .table tbody {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.table tfoot {
+  display: flex;
+  justify-content: center;
 }
 
 .table tr {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 
-  margin: 0 auto;
   margin-bottom: 15px;
 
-  min-width: 285px;
-}
-
-.table__data {
-  text-align: center;
+  position: relative;
 }
 
 .table__nums {
@@ -59,8 +62,11 @@
   padding-right: 15px;
 
   width: 70px;
-  margin-top: -9px;
-  margin-left: 10px;
+
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%);
 
   background-color: $bg-secondary;
 }
@@ -73,10 +79,6 @@
   font-weight: 300;
   font-style: normal;
   text-transform: uppercase;
-
-  text-align: center;
-
-  flex-basis: 100%;
 }
 
 
@@ -86,37 +88,23 @@
 
   .table {
     background-color: $bg-primary;
-  }
 
-  .table tbody{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 
     width: 708px;
+    height: 85px;
+
+    margin-top: 40px;
   }
 
-  .table tr {
+  .table tbody {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
-    margin: 0 auto;
-    margin-bottom: 15px;
-
-    // border: 1px solid navy; // del
+    width: 365px;
   }
-
-  .table--first-row {
-    flex-grow: 3;
-  }
-
-  .table--second-row {
-    flex-grow: 1;
-  }
-
-  // .table__data {
-  // }
 
   .table__nums {
     font-size: 30px;
@@ -132,6 +120,11 @@
 
     background-color: $bg-primary;
 
+    padding-left: 5px;
+    padding-right: 5px;
+
+    top: 85%;
+
     min-width: 130px; // "затрачено времени" встает в одну строку, вместо двух
   }
 
@@ -139,7 +132,14 @@
     font-size: 20px;
     line-height: 20px;
 
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .table__total td {
+    margin-top: 7px;
   }
 
 }
