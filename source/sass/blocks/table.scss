@@ -1,11 +1,16 @@
 .table {
-  display: flex;
-  flex-direction: column;
+  background-color: $bg-secondary;
 
+  min-width: 280px;
+  // max-width: 300px;
+  margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 17px;
+}
 
-  background-color: $bg-secondary;
+.table tbody {
+  display: flex;
+  flex-direction: column;
 }
 
 .table tr {
@@ -16,7 +21,7 @@
   margin: 0 auto;
   margin-bottom: 15px;
 
-  max-width: 285px;
+  min-width: 285px;
 }
 
 .table__data {
@@ -48,13 +53,14 @@
   font-size: 12px;
   line-height: 12px;
 
-  display: inline-block;
+  display: block;
 
   padding-left: 15px;
   padding-right: 15px;
 
+  width: 70px;
   margin-top: -9px;
-  margin-right: -2px;
+  margin-left: 10px;
 
   background-color: $bg-secondary;
 }
@@ -77,5 +83,63 @@
 
 //      tablet
 @media screen and (min-width: $tablet-width) {
+
+  .table {
+    background-color: $bg-primary;
+  }
+
+  .table tbody{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 708px;
+  }
+
+  .table tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+    // border: 1px solid navy; // del
+  }
+
+  .table--first-row {
+    flex-grow: 3;
+  }
+
+  .table--second-row {
+    flex-grow: 1;
+  }
+
+  // .table__data {
+  // }
+
+  .table__nums {
+    font-size: 30px;
+    line-height: 38px;
+
+    min-width: 161px;
+    min-height: 70px;
+  }
+
+  .table__text {
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $bg-primary;
+
+    min-width: 130px; // "затрачено времени" встает в одну строку, вместо двух
+  }
+
+  .table__total {
+    font-size: 20px;
+    line-height: 20px;
+
+    width: 200px;
+  }
 
 }
