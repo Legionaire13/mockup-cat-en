@@ -92,6 +92,7 @@ gulp.task("html", () => {
 // живой сервер
 gulp.task("browser-sync", () => {
   browserSync({
+    notify: false,
     server: {
       baseDir: "./build"
     }
@@ -174,7 +175,9 @@ gulp.task("scripts", () => {
 // watchers
 gulp.task("serve", () => {
   browserSync.init({
+    browser: "chrome",
     server: "./build",
+    port: 3000,
     notify: false
   });
 
@@ -192,7 +195,7 @@ gulp.task("serve", () => {
 gulp.task("build",
   gulp.series("clean",
     gulp.parallel(
-      gulp.series("images", "webp"),
+      // gulp.series("images", "webp"),
       "styling", "scripts"),
     "copy",
     "svg-sprite",
