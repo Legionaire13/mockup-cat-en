@@ -19,6 +19,8 @@
   text-transform: uppercase;
 
   padding: 15px;
+
+  // border: 1px dashed black; //  test
 }
 
 .address__text {
@@ -27,4 +29,40 @@
   font-style: normal;
 
   padding: 15px;
+
+  // border: 1px dashed black; //  test
+}
+
+.address--mobile-only {
+  display: none;
+}
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .address {
+    height: 200px;
+    padding-top: 3px; // pp
+  }
+
+  .address__call {
+    font-size: 20px;
+    line-height: 25px;
+    flex-basis: 240px;
+  }
+
+  .address__text {
+    font-size: 16px;
+    line-height: 20px;
+    flex-basis: 240px;
+
+    text-align: right;
+  }
+
+  .address--mobile-only {
+    display: block;
+  }
+
 }
