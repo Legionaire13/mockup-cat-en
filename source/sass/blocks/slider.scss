@@ -127,14 +127,14 @@
     position: relative;
 
     max-width: 768px;
-    min-height: 631px;
+    height: 631px;
 
     margin: 0 auto;
   }
 
   .slider__cat-before {
     width: 50%;
-    min-height: 631px;
+    height: 631px;
 
     position: absolute;
     z-index: 2;
@@ -146,7 +146,7 @@
 
   .slider__cat-after {
     width: 768px;
-    min-height: 631px;
+    height: 631px;
 
     // margin: 0 auto;
     position: absolute;
@@ -229,12 +229,15 @@
     margin-top: -14px;
   }
 
-  // доделать эффекты
-  &:focus::-webkit-slider-thumb,
-  &:focus::-moz-range-thumb,
-  &:focus::-ms-thumb {
+  // effects
+  &:hover::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px $slider-thumb-border,
+    0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:focus::-webkit-slider-thumb {
     box-shadow: 0 0 0 2px $bg-others,
-     0 3px 5px rgba(0, 0, 0, 0.3);
+    0 4px 5px 0 rgba(0, 0, 0, 0.3);
   }
 
   &::-moz-range-track {
@@ -259,6 +262,17 @@
      0 2px 5px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;
+  }
+
+  // effects
+  &:hover::-moz-range-thumb {
+    box-shadow: 0 0 0 1px $slider-thumb-border,
+    0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 2px $bg-others,
+    0 4px 5px 0 rgba(0, 0, 0, 0.3);
   }
 
   &::-ms-track {
@@ -298,6 +312,17 @@
      0 2px 5px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;
+  }
+
+  // effects
+  &:hover::-ms-thumb {
+    box-shadow: 0 0 0 1px $slider-thumb-border,
+    0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:focus::-ms-thumb {
+    box-shadow: 0 0 0 2px $bg-others,
+    0 4px 5px 0 rgba(0, 0, 0, 0.3);
   }
 
 
