@@ -19,3 +19,17 @@
 
   fill: #666666;
 }
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .copyright__link {
+    margin-left: -13px; // pp
+  }
+
+  .copyright__logo {
+    margin-right: 10px; // pp
+  }
+}

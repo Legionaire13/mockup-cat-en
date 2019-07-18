@@ -40,3 +40,31 @@
     background-image: url(../img/icon-fb.svg);
   }
 }
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .social__list {
+    width: 85%;
+  }
+
+  .social__link {
+    width: 28px;
+    height: 28px;
+
+    &--vk {
+      width: 32px;
+    }
+
+    &--inst {
+      height: 23px;
+    }
+
+    &--fb {
+      height: 28px;
+    }
+  }
+
+}
