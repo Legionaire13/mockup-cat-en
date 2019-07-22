@@ -138,3 +138,58 @@
   }
 
 }
+
+
+
+
+//      desktop
+@media screen and (min-width: $desktop-width) {
+
+  .intro {
+    max-width: 100%;
+    min-height: 0px;
+  }
+
+  .intro__wrapper {
+    align-items: flex-start;
+
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 60px;
+    margin: 0 auto;
+
+    min-width: 590px;
+    max-width: 1060px;
+    min-height: 580px;
+  }
+
+  .intro__headline {
+    margin-left: 0; //pp
+  }
+
+  .intro__call {
+    margin-left: 0; //pp
+  }
+
+  .intro__product {
+    top: -25px;
+    left: 370px;
+
+    max-width: 552px;
+    max-height: 499px;
+
+    z-index: -1;
+  }
+
+  .intro__link {
+    margin-top: 52px; // pp
+    padding-top: 15px; // pp
+    padding-left: 7px; // pp
+    padding-right: 11px; // pp
+    padding-bottom: 9px; // pp
+
+    min-width: 228px; // pp
+    min-height: 30px; // pp
+  }
+
+}
