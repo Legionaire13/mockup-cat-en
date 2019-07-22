@@ -78,3 +78,24 @@
   }
 
 }
+
+
+//      desktop
+@media screen and (min-width: $desktop-width) {
+
+  .main-nav {
+    width: 480px;
+  }
+
+  .main-nav-list__item a {
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #fff;
+  }
+
+  .main-nav-list__item--active a {
+    border-bottom: 2px solid #fff;
+  }
+
+}

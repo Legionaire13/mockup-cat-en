@@ -107,3 +107,41 @@
   }
 
 }
+
+
+//      desktop
+@media screen and (min-width: $desktop-width) {
+
+  .page-header {
+    max-width: 1220px;
+
+    padding-top: 50px; // pp
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 20px;
+
+    &::after {
+      content: "";
+      display: block;
+
+      width: 50%;
+      height: 696px;
+
+      background-color: #65a93c; //fallback
+      background-image: url(../img/index-bg.jpg);
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .page-header__logo {
+    width: 202px;
+    height: 59px;
+  }
+
+}
