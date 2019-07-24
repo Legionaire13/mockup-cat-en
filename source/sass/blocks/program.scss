@@ -174,11 +174,11 @@
     max-width: 370px;
   }
 
-  .program--loss .program__text{
+  .program--loss .program__text {
     max-width: 375px;
   }
 
-  .program--gain .program__text{
+  .program--gain .program__text {
     max-width: 344px;
   }
 
@@ -203,6 +203,90 @@
 
   .program .divider {
     display: none;
+  }
+
+}
+
+
+
+//      desktop
+@media screen and (min-width: $desktop-width) {
+
+  .program-wrapper {
+    margin: 0 auto;
+
+    max-width: 1220px;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .program {
+    width: 467px;
+    height: 295px;
+
+    margin: 0;
+    padding-top: 77px;
+    padding-left: 52px; // pp
+    padding-bottom: 0px; // pp
+
+    &--loss::after,
+    &--gain::after {
+      top: 47px;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &--loss::before {
+      top: 41px;
+      left: 66px;
+
+      width: 70px;
+      height: 97px;
+    }
+
+    &--gain::before {
+      top: 69px;
+      left: 34px;
+
+      width: 134px;
+      height: 56px;
+    }
+
+  }
+
+  .program__name {
+    text-align: left;
+
+    margin-left: 160px; // pp
+    margin-top: 0px; // pp
+    margin-bottom: 70px;
+  }
+
+  .program__text {
+    max-width: 100%;
+
+    margin: 0;
+    margin-top: 4px; // pp
+  }
+
+  .program--loss .program__text {
+    max-width: 100%;
+  }
+
+  .program--gain .program__text {
+    max-width: 100%;
+  }
+
+  .program__link {
+    margin-top: 31px; // pp
+
+    &::after {
+      left: 131px;
+      top: 5px;
+    }
   }
 
 }
