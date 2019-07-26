@@ -60,3 +60,33 @@
   }
 
 }
+
+
+
+//      desktop
+@media screen and (min-width: $desktop-width) {
+
+  .example {
+    display: flex;
+    margin: 0 auto;
+
+    background-color: transparent; // поставить градиент?
+  }
+
+  .example__wrapper {
+    min-width: 280px;
+    max-width: 430px;
+
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 30px;
+
+    // border: 1px dashed black; // to del
+  }
+
+  .example__text {
+    max-width: 100%;
+    margin-top: 135px;
+  }
+
+}

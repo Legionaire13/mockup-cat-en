@@ -2,7 +2,6 @@
   background-color: $bg-secondary;
 
   min-width: 280px;
-  // max-width: 300px;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 14px;
@@ -94,7 +93,7 @@
     align-items: flex-start;
 
     width: 708px;
-    height: 85px;
+    min-height: 85px;
 
     margin-top: 40px;
   }
@@ -140,6 +139,39 @@
 
   .table__total td {
     margin-top: 7px;
+  }
+
+}
+
+
+
+
+//      desktop
+@media screen and (min-width: $desktop-width) {
+
+  .table {
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+
+    margin: 0;
+    margin-top: 55px;
+  }
+
+  .table__total {
+    max-width: 430px;
+    flex-direction: row;
+
+    margin-top: 15px;
+    // border: 1px solid black; // to del
+  }
+
+  .table__total td {
+    text-align: left;
+    margin-right: 60px; // pp
+
+    // border: 1px solid black;// to del
   }
 
 }
