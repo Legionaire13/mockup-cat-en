@@ -77,18 +77,22 @@ h6 {
 }
 
 .divider--mobile-only {
-  display: block;
+  display: none;
 }
 
-@media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media screen and (max-width: $tablet-width - 1px) {
+
+  .divider--mobile-only {
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
 
   .divider--tablet-only {
     display: block;
     width: 100%;
-  }
-
-  .divider--mobile-only {
-    display: none;
   }
 
 }
