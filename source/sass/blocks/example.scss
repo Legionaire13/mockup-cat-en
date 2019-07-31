@@ -2,7 +2,7 @@
   background-color: $bg-secondary;
 }
 
-.example__wrapper {
+.example__container {
   display: flex;
   flex-direction: column;
 
@@ -37,7 +37,7 @@
     background-color: $bg-primary;
   }
 
-  .example__wrapper {
+  .example__container {
     margin: 30px auto;
     padding-left: 0;
     padding-right: 0;
@@ -68,15 +68,17 @@
 
   .example {
     display: flex;
+    justify-content: center;
 
-    margin: 0 auto;
+    width: 100%;
 
-    width: 1440px;
-
-    background: linear-gradient(to bottom, #ffffff 0% 28.2%, #f2f2f2 28.2% 100%);
+    // background: linear-gradient(to bottom, #ffffff 0% 28.2%, #f2f2f2 28.2% 100%);
+    background: linear-gradient(to right, #f2f2f2 0% 58%, #eaeaea 58% 100%);
+    background-position: 0 179px;
+    background-repeat: no-repeat;
   }
 
-  .example__wrapper {
+  .example__container {
     min-width: 280px;
     max-width: 430px;
 

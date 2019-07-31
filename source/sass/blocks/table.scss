@@ -86,7 +86,7 @@
 @media screen and (min-width: $tablet-width) {
 
   .table {
-    background-color: $table-bg--tablet;
+    background-color: transparent;
 
     display: flex;
     justify-content: space-between;
@@ -117,7 +117,7 @@
     font-size: 14px;
     line-height: 14px;
 
-    background-color: $table-bg--tablet;
+    background-color: transparent;
 
     padding-left: 5px;
     padding-right: 5px;
