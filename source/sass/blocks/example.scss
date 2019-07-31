@@ -68,9 +68,12 @@
 
   .example {
     display: flex;
+
     margin: 0 auto;
 
-    background-color: transparent; // поставить градиент?
+    width: 1440px;
+
+    background: linear-gradient(to bottom, #ffffff 0% 28.2%, #f2f2f2 28.2% 100%);
   }
 
   .example__wrapper {
@@ -80,8 +83,6 @@
     margin-left: 110px;
     margin-right: 110px;
     margin-top: 30px;
-
-    // border: 1px dashed black; // to del
   }
 
   .example__text {
