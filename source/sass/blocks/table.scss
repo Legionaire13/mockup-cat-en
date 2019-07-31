@@ -1,5 +1,5 @@
 .table {
-  background-color: $bg-secondary;
+  background-color: $table-bg;
 
   min-width: 280px;
   margin: 0 auto;
@@ -67,7 +67,7 @@
   top: 80%;
   transform: translate(-50%);
 
-  background-color: $bg-secondary;
+  background-color: $table-bg;
 }
 
 .table__total {
@@ -86,7 +86,7 @@
 @media screen and (min-width: $tablet-width) {
 
   .table {
-    background-color: $bg-primary;
+    background-color: $table-bg--tablet;
 
     display: flex;
     justify-content: space-between;
@@ -117,7 +117,7 @@
     font-size: 14px;
     line-height: 14px;
 
-    background-color: $bg-primary;
+    background-color: $table-bg--tablet;
 
     padding-left: 5px;
     padding-right: 5px;
@@ -155,8 +155,14 @@
 
     width: 100%;
 
+    background-color: $table-bg;
+
     margin: 0;
     margin-top: 55px;
+  }
+
+  .table__text {
+    background-color: $table-bg;
   }
 
   .table__total {
@@ -164,14 +170,11 @@
     flex-direction: row;
 
     margin-top: 15px;
-    // border: 1px solid black; // to del
   }
 
   .table__total td {
     text-align: left;
     margin-right: 60px; // pp
-
-    // border: 1px solid black;// to del
   }
 
 }
