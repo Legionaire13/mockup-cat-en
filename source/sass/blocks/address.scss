@@ -66,3 +66,28 @@
   }
 
 }
+
+
+
+
+//      desktop
+@media screen and (min-width: $desktop-width) {
+
+  .address {
+    position: absolute;
+    width: 570px;
+
+    top: 17.5%;
+    left: 7.7%;
+  }
+
+  .address__call {
+    padding-left: 74px;
+  }
+
+  .address__text {
+    text-align: left;
+    padding-right: 18px;
+  }
+
+}

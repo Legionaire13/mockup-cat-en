@@ -71,11 +71,15 @@
     justify-content: center;
 
     width: 100%;
+    height: 641px;
 
-    // background: linear-gradient(to bottom, #ffffff 0% 28.2%, #f2f2f2 28.2% 100%);
+    padding-top: 10px;
+
     background: linear-gradient(to right, #f2f2f2 0% 58%, #eaeaea 58% 100%);
-    background-position: 0 179px;
+    background-position: 0 190px;
     background-repeat: no-repeat;
+
+    overflow: hidden;
   }
 
   .example__container {

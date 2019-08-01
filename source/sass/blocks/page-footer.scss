@@ -47,6 +47,9 @@
 }
 
 
+
+
+//      tablet
 @media screen and (min-width: $tablet-width) {
 
   .page-footer__map {
@@ -79,7 +82,31 @@
   .page-footer__copyright {
     width: 160px;
 
-    margin:0;
+    margin: 0;
+  }
+
+}
+
+
+
+
+//      desktop
+@media screen and (min-width: $desktop-width) {
+
+  .page-footer {
+    position: relative;
+  }
+
+  .page-footer__bottom-wrapper {
+    height: 160px;
+  }
+
+  .page-footer__logo-headline {
+    padding-left: 80px;
+  }
+
+  .page-footer__copyright {
+    padding-right: 100px;
   }
 
 }
