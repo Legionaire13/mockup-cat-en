@@ -102,17 +102,10 @@
     margin-top: 35px;
     padding-bottom: 0;
 
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 73%;
-
-      position: absolute;
-      bottom: 0;
-
-      background: $bg-slider-grad;
-    }
+    background: $bg-slider-grad;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 170px;
   }
 
   .slider--tab-desktop {
@@ -221,7 +214,7 @@
     border-radius: 50%;
     background: $bg-others;
     box-shadow: 0 0 0 1px $slider-thumb-border,
-     0 2px 5px rgba(0, 0, 0, 0.15);
+      0 2px 5px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;
 
@@ -232,12 +225,12 @@
   // effects
   &:hover::-webkit-slider-thumb {
     box-shadow: 0 0 0 1px $slider-thumb-border,
-    0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      0 3px 5px 0 rgba(0, 0, 0, 0.25);
   }
 
   &:focus::-webkit-slider-thumb {
     box-shadow: 0 0 0 2px $bg-others,
-    0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      0 4px 5px 0 rgba(0, 0, 0, 0.3);
   }
 
   &::-moz-range-track {
@@ -259,7 +252,7 @@
     border-radius: 50%;
     background: $bg-others;
     box-shadow: 0 0 0 1px $slider-thumb-border,
-     0 2px 5px rgba(0, 0, 0, 0.15);
+      0 2px 5px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;
   }
@@ -267,12 +260,12 @@
   // effects
   &:hover::-moz-range-thumb {
     box-shadow: 0 0 0 1px $slider-thumb-border,
-    0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      0 3px 5px 0 rgba(0, 0, 0, 0.25);
   }
 
   &:focus::-moz-range-thumb {
     box-shadow: 0 0 0 2px $bg-others,
-    0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      0 4px 5px 0 rgba(0, 0, 0, 0.3);
   }
 
   &::-ms-track {
@@ -309,7 +302,7 @@
     border-radius: 50%;
     background: $bg-others;
     box-shadow: 0 0 0 1px $slider-thumb-border,
-     0 2px 5px rgba(0, 0, 0, 0.15);
+      0 2px 5px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;
   }
@@ -317,12 +310,12 @@
   // effects
   &:hover::-ms-thumb {
     box-shadow: 0 0 0 1px $slider-thumb-border,
-    0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      0 3px 5px 0 rgba(0, 0, 0, 0.25);
   }
 
   &:focus::-ms-thumb {
     box-shadow: 0 0 0 2px $bg-others,
-    0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      0 4px 5px 0 rgba(0, 0, 0, 0.3);
   }
 
 }
@@ -334,15 +327,15 @@
 
   .slider {
     height: 645px;
-    max-width: 790px;
-    width: 790px;
+    max-width: 768px;
+    width: 768px;
 
     margin-top: -10px;
 
-    &::after {
-      height: 70.7%;
-      background: $bg-slider-grad;
-    }
+    background: $bg-slider-grad;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 170px;
   }
 
   .slider__container {
