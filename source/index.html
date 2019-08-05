@@ -22,7 +22,7 @@
         </picture>
       </a>
       <a class="page-header__logo-mobile">
-        <img src="img/logo-mobile-header.svg" width="101" height="18"
+        <img src="img/logo-mobile-name.svg" width="101" height="18"
           alt="Cat Energy - функциональное питание для котов">
       </a>
       <button class="page-header__nav-mobile" type="button">
@@ -216,18 +216,30 @@
       <address class="address__text">ул. Большая <br> Конюшенная, д. 19/8 <br> <br class="address--mobile-only">
         Санкт-Петербург</address>
     </div>
+
     <div class="page-footer__map">
-      <iframe
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/map-desktop@2x.jpg 2x, img/map-desktop.jpg">
+        <source media="(min-width: 1440px)" srcset="img/map-desktop@2x.webp 2x, img/map-desktop.webp">
+        <source media="(min-width: 768px)" srcset="img/map-tablet@2x.jpg 2x, img/map-tablet.jpg">
+        <source media="(min-width: 768px)" srcset="img/map-tablet@2x.webp 2x, img/map-tablet.webp">
+        <source srcset="img/map-mobile@2x.webp 2x, img/map-mobile.webp">
+        <source srcset="img/map-mobile@2x.jpg 2x, img/map-mobile.jpg">
+        <img src="img/map-mobile.jpg" alt="Карта проезда: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      </picture>
+
+      <!-- real google maps frame-->
+      <!-- <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d297.09446353678925!2d30.322983461332026!3d59.93869046866231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5Lzg!5e0!3m2!1sru!2sru!4v1561843649417!5m2!1sru!2sru"
-        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-      <!-- <img src="img/map-mobile.jpg" width="425" height="360"
-        alt="Карта проезда: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"> -->
+        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen>
+      </iframe> -->
+
     </div>
 
     <div class="page-footer__bottom-wrapper">
       <div class="page-footer__logo-headline">
-        <img src="img/logo-mobile-header.svg" width="128" height="24"
-        alt="Cat Energy - функциональное питание для котов">
+        <img src="img/logo-mobile-name.svg" width="128" height="24"
+          alt="Cat Energy - функциональное питание для котов">
       </div>
 
       <hr class="divider divider--mobile-only">

@@ -53,9 +53,9 @@ gulp.task("styling", (done) => {
 gulp.task("copy", (done) => {
   gulp.src([
       "./source/fonts/**/*.{woff,woff2}",
-      "./source/img/**",
+      "./source/img/**"
       // "./source/js/**",
-      ".source/*.html"
+      // ".source/*.html"
     ], {
       base: "source"
     })
@@ -86,7 +86,7 @@ gulp.task("html", () => {
       // collapseWhitespace: true,
       removeComments: true
     }))
-    .pipe(gulp.dest("./build"));
+    .pipe(gulp.dest("build/"));
 });
 
 // живой сервер
@@ -94,7 +94,8 @@ gulp.task("browser-sync", () => {
   browserSync({
     notify: false,
     server: {
-      baseDir: "./build"
+      baseDir: "./build",
+      port: 3000
     }
   });
 });
@@ -128,7 +129,7 @@ gulp.task("webp", (done) => {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest("./source/img"));
+    .pipe(gulp.dest("./build/img"));
   done();
 });
 
@@ -177,8 +178,8 @@ gulp.task("serve", () => {
   browserSync.init({
     browser: "chrome",
     server: "./build",
-    port: 3000,
-    notify: false
+    notify: false,
+    port: 3000
   });
 
   gulp.watch("./source/sass/**/*.scss", gulp.series("styling"));
@@ -192,12 +193,26 @@ gulp.task("serve", () => {
 
 
 // финальный набор
+// gulp.task("build",
+//   gulp.series("clean",
+//     gulp.parallel(
+//       gulp.series("images", "webp"),
+//       "styling", "scripts"),
+//     "copy",
+//     "svg-sprite",
+//     "html"
+//   ));
+
+
 gulp.task("build",
   gulp.series("clean",
     gulp.parallel(
-      // gulp.series("images", "webp"),
-      "styling", "scripts"),
+      "styling",
+      "scripts",
+      "images"
+    ),
     "copy",
-    "svg-sprite",
+    gulp.parallel("svg-sprite", "webp"),
     "html"
-  ));
+  )
+);
