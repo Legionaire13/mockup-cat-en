@@ -8,20 +8,27 @@
   align-items: center;
 
   height: 360px;
+  position: relative;
 
   overflow: hidden;
 }
 
-.page-footer__map img {
+.page-footer__map .map {
   margin: 0 auto;
+}
+
+.page-footer .pin {
+  position: absolute;
+  top: 38.3%; // pp
+  left: 42.1%; // pp
+
+  width: 55px;
+  height: auto;
 }
 
 .page-footer__logo-headline {
   margin: 0 auto;
   display: block;
-
-  width: 130px;
-  height: 25px;
 
   margin-top: 40px;
   margin-bottom: 28px;
@@ -54,6 +61,14 @@
 
   .page-footer__map {
     height: 395px;
+  }
+
+  .page-footer .pin {
+    top: 36.8%; // pp
+    left: 43.5%; // pp
+
+    width: 110px;
+    height: auto;
   }
 
   .page-footer__bottom-wrapper {
@@ -95,6 +110,14 @@
 
   .page-footer {
     position: relative;
+  }
+
+  .page-footer .pin {
+    top: 38.2%; // pp
+    left: 70.1%; // pp
+
+    width: 110px;
+    height: auto;
   }
 
   .page-footer__bottom-wrapper {

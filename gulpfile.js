@@ -204,6 +204,7 @@ gulp.task("serve", () => {
 //   ));
 
 
+// вариант 2
 gulp.task("build",
   gulp.series("clean",
     gulp.parallel(

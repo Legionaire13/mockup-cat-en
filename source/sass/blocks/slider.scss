@@ -24,7 +24,7 @@
 
   position: absolute;
 
-  background: $bg-secondary url(../img/cat-before.png) no-repeat;
+  background: $bg-secondary url(../img/cat-before-mobile.png) no-repeat;
   background-position: 50% 0%;
   background-size: contain;
 }
@@ -37,7 +37,7 @@
 
   position: absolute;
 
-  background: $bg-secondary url(../img/cat-after.png) no-repeat;
+  background: $bg-secondary url(../img/cat-after-mobile.png) no-repeat;
   background-position: 50% 0%;
   background-size: contain;
 }
@@ -89,6 +89,28 @@
     border-radius: 3px;
   }
 }
+
+// retina mobile
+@media screen and (max-width: 767px) and (min-resolution: 1.5dppx) {
+
+  .slider__cat-before {
+    background: $bg-secondary url(../img/cat-before-mobile@2x.png) no-repeat;
+    background-position: 50% 0%;
+    background-size: contain;
+  }
+
+  .slider__cat-after {
+    background: $bg-secondary url(../img/cat-after-mobile@2x.png) no-repeat;
+    background-position: 50% 0%;
+    background-size: contain;
+  }
+
+}
+
+
+
+
+
 
 
 
@@ -320,6 +342,29 @@
 
 }
 
+// retina tablets
+@media screen and (min-width: $tablet-width) and (min-resolution: 1.5dppx) {
+
+  .slider__cat-before {
+    background: url(../img/cat-before@2x.png) no-repeat, $bg-slider-img-grad;
+    background-position: -13% 7%; // pp
+    background-size: 690px 517px, contain;
+  }
+
+  .slider__cat-after {
+    background: url(../img/cat-after@2x.png) no-repeat, $bg-slider-img-grad2;
+    background-position: 85% 0%; // pp
+    background-size: 690px 517px, contain;
+  }
+
+}
+
+
+
+
+
+
+
 
 
 //      desktop
@@ -358,5 +403,24 @@
     bottom: 9.8%;
   }
 
+
+}
+
+// retina desktops
+@media screen and (min-width: $desktop-width) and (min-resolution: 1.5dppx) {
+
+  .slider__cat-before {
+    height: 650px;
+    background: url(../img/cat-before@2x.png) no-repeat, linear-gradient(to bottom, #ffffff 29.3%, #f2f2f2 29.3%);
+    background-position: -4% 7%; // pp
+    background-size: 690px 517px, contain;
+  }
+
+  .slider__cat-after {
+    height: 650px;
+    background: url(../img/cat-after@2x.png) no-repeat, linear-gradient(to bottom, #ffffff 29.3%, #eaeaea 29.3%);
+    background-position: 47% 0%; // pp
+    background-size: 690px 517px, contain;
+  }
 
 }

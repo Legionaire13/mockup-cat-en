@@ -5,6 +5,12 @@ $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 
+// font-families
+$font-family: "Oswald Regular", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+$font-family-medium: "Oswald Medium", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+$font-family-common: "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+
+
 // colors set
 $bg-primary: #ffffff;
 $bg-secondary: #f2f2f2;
@@ -25,7 +31,4 @@ $slider-thumb-border: #cdcdcd;
 
 $table-bg:#f2f2f2;
 
-// font-families
-$font-family: "Oswald Regular", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
-$font-family-medium: "Oswald Medium", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
-$font-family-common: "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+$data__heading: "Oswald Regular", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;

@@ -8,17 +8,20 @@
 .page-header__logo {
   width: 33px;
   height: 38px;
+  margin-left: 20px;
+  margin-bottom: 4px;
 }
 
 .page-header__logo-mobile {
   width: 101px;
   height: 18px;
+  margin-left: -8px;
 }
 
 .page-header__wrapper {
   display: flex;
 
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   align-self: stretch;
 
@@ -37,6 +40,9 @@
 
   width: 25px;
   height: 20px;
+
+  margin-right: 20px;
+  margin-bottom: 2px; //pp
 
   cursor: pointer;
 }
@@ -84,6 +90,8 @@
   .page-header__logo {
     width: 173px;
     height: 58px;
+
+    margin: 0;
   }
 
   .page-header__logo-mobile {

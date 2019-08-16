@@ -62,6 +62,20 @@
   // margin-top: 2px;
 }
 
+// retina mobile
+@media screen and (max-width: 767px) and (min-resolution: 1.5dppx) {
+
+  .intro__wrapper {
+    background: url(../img/index-bg-mobile@2x.jpg) no-repeat 50% 0%;
+    background-size: contain;
+  }
+
+}
+
+
+
+
+
 
 //       tablet
 @media screen and (min-width: $tablet-width) {

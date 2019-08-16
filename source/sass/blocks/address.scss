@@ -2,7 +2,7 @@
   display: flex;
 
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 115px;
 
@@ -18,9 +18,7 @@
   font-style: normal;
   text-transform: uppercase;
 
-  padding: 15px;
-
-  // border: 1px dashed black; //  test
+  margin-left: 19px;
 }
 
 .address__text {
@@ -28,9 +26,7 @@
   line-height: 20px;
   font-style: normal;
 
-  padding: 15px;
-
-  // border: 1px dashed black; //  test
+  margin-right: 25px;
 }
 
 .address--mobile-only {
@@ -51,6 +47,7 @@
     font-size: 20px;
     line-height: 25px;
     flex-basis: 240px;
+    margin-left: 70px;
   }
 
   .address__text {
@@ -59,6 +56,8 @@
     flex-basis: 240px;
 
     text-align: right;
+
+    margin-right: 70px;
   }
 
   .address--mobile-only {
@@ -79,15 +78,17 @@
 
     top: 17.5%;
     left: 7.7%;
+
+    z-index: 1;
   }
 
   .address__call {
-    padding-left: 74px;
+    margin-left: 75px;
   }
 
   .address__text {
     text-align: left;
-    padding-right: 18px;
+    margin-right: 5px;
   }
 
 }
