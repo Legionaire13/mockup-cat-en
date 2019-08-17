@@ -1,0 +1,35 @@
+.additional {
+  text-align: left;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+
+  margin-bottom: 10px;
+}
+
+.additional td {
+  padding: 0;
+  margin: 0;
+}
+
+.additional__heading {
+  font-family: $data__heading;
+  font-size: 16px;
+  line-height: 20px;
+
+  margin-top: 11px; // pp
+  margin-bottom: 11px; // pp
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.additional__param {
+  padding: 0;
+  margin: 0;
+}
+
+.additional__price {
+  text-align: right;
+}

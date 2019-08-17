@@ -57,10 +57,10 @@
 
     <article class="catalog">
       <h1 class="catalog__heading">Каталог продукции</h1>
-      <section class="catalog__main">
+      <section class="catalog__main-goods">
         <h2 class="visually-hidden">Основные товары</h2>
         <ul>
-          <li class="product-card">
+          <li class="product-card product-card--main">
             <div class="product-card__description">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp" srcset="img/catalog-1-desktop.webp">
@@ -101,7 +101,7 @@
             <button class="product-card__button">Заказать</button>
           </li>
 
-          <li class="product-card">
+          <li class="product-card product-card--main">
             <div class="product-card__description">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp" srcset="img/catalog-2-desktop.webp">
@@ -142,7 +142,7 @@
             <button class="product-card__button">Заказать</button>
           </li>
 
-          <li class="product-card">
+          <li class="product-card product-card--main">
             <div class="product-card__description">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp" srcset="img/catalog-3-desktop.webp">
@@ -183,7 +183,7 @@
             <button class="product-card__button">Заказать</button>
           </li>
 
-          <li class="product-card">
+          <li class="product-card product-card--main">
             <div class="product-card__description">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp" srcset="img/catalog-4-desktop.webp">
@@ -224,7 +224,7 @@
             <button class="product-card__button">Заказать</button>
           </li>
 
-          <li class="product-card">
+          <li class="product-card product-card--main">
             <div class="product-card__description">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp" srcset="img/catalog-5-desktop.webp">
@@ -265,7 +265,7 @@
             <button class="product-card__button">Заказать</button>
           </li>
 
-          <li class="product-card">
+          <li class="product-card product-card--main">
             <div class="product-card__description">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp" srcset="img/catalog-6-desktop.webp">
@@ -306,7 +306,7 @@
             <button class="product-card__button">Заказать</button>
           </li>
 
-          <li class="product-card">
+          <li class="product-card product-card--main">
             <div class="product-card__description">
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp" srcset="img/catalog-7-desktop.webp">
@@ -347,7 +347,7 @@
             <button class="product-card__button">Заказать</button>
           </li>
 
-          <li class="product-card">
+          <li class="product-card product-card--main">
 
             <div class="product-card__plus">
               <svg width="30" height="35">
@@ -362,20 +362,77 @@
               На самом деле вкусов гораздо больше!
             </p>
 
-            <button class="product-card__button">Показать все</button>
+            <button class="product-card__button product-card__button--more">Показать все</button>
           </li>
 
         </ul>
       </section>
 
-      <section class="catalog__additional">
-        <h2>Дополнительные товары</h2>
+      <section class="catalog__additional-goods">
+        <h2 class="catalog__heading--secondary">Дополнительные товары</h2>
+        <ul>
+          <li class="product-card product-card--additional">
+            <table class="additional">
+              <caption class="additional__heading">Сахарозаменитель</caption>
+              <tbody>
+                <tr>
+                  <td class="additional__param">1 упаковка (100г)</td>
+                  <td class="additional__price">100 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="product-card__button">Заказать</button>
+          </li>
+          <li class="product-card product-card--additional">
+            <table class="additional">
+              <caption class="additional__heading">Питьевая вода</caption>
+              <tbody>
+                <tr>
+                  <td class="additional__param">5 литров</td>
+                  <td class="additional__price">50 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="product-card__button">Заказать</button>
+          </li>
+          <li class="product-card product-card--additional">
+            <table class="additional">
+              <caption class="additional__heading">Молоко</caption>
+              <tbody>
+                <tr>
+                  <td class="additional__param">1 литр</td>
+                  <td class="additional__price">100 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="product-card__button">Заказать</button>
+          </li>
+          <li class="product-card product-card--additional">
+            <table class="additional">
+              <caption class="additional__heading">Витамины</caption>
+              <tbody>
+                <tr>
+                  <td class="additional__param">1 упаковка (30 г)</td>
+                  <td class="additional__price">300 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="product-card__button">Заказать</button>
+          </li>
+        </ul>
 
       </section>
 
-      <section class="catalog__proposal">
+      <section class="catalog__gift gift">
         <h2 class="visually-hidden">Подарок</h2>
-
+        <div class="gift__image">
+          <svg width="30" height="35">
+            <use xlink:href="img/sprite.svg#icon-gift"></use>
+          </svg>
+        </div>
+        <b class="gift__text">
+          Закажите все и получите чехол для кота в подарок!
+        </b>
       </section>
     </article>
 
