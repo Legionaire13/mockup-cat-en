@@ -1,0 +1,62 @@
+.goods__table {
+  text-align: left;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+
+  margin-bottom: 10px;
+}
+
+.goods ul,
+.goods td,
+.goods__param {
+  padding: 0;
+  margin: 0;
+}
+
+.goods__caption {
+  font-family: $data__heading;
+  font-size: 16px;
+  line-height: 20px;
+
+  margin-top: 11px; // pp
+  margin-bottom: 11px; // pp
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.goods__heading {
+  font-size: 24px;
+  line-height: 24px;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0; // необходимо для соответствия макету
+
+  padding-top: 8px;
+  padding-bottom: 33px;
+
+  position: relative;
+
+  border-bottom: 1px solid #e6e6e6;
+
+  &::after {
+    content: '';
+    display: block;
+
+    height: 3px;
+
+    position: absolute;
+    left: 247px; // pp
+    top: 33%; // pp
+    right: -20px;
+
+    background-color: $bg-others;
+  }
+}
+
+.goods__price {
+  text-align: right;
+}

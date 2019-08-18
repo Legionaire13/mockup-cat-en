@@ -10,7 +10,7 @@
     border-top: none;
   }
 
-  &--additional {
+  &--goods {
     margin-left: 20px;
     margin-right: 20px;
 
@@ -18,6 +18,11 @@
 
     border-bottom: 1px solid #cdcdcd;
   }
+}
+
+.product-card ul {
+    margin: 0;
+    padding: 0;
 }
 
 .product-card__description {
@@ -90,6 +95,6 @@
   margin-bottom: 7px; // pp
 }
 
-.product-card--additional .product-card__button {
+.product-card--goods .product-card__button {
   margin: 0;
 }
