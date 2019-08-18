@@ -9,3 +9,21 @@
 
   border-bottom: 1px solid #e6e6e6;
 }
+
+
+
+
+//tablets
+@media screen and (min-width: $tablet-width) {
+
+  .catalog__heading {
+    font-size: 60px;
+    line-height: 60px;
+
+    padding: 30px;
+    padding-top: 25px;
+
+    border-bottom: none;
+  }
+
+}
