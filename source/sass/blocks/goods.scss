@@ -60,3 +60,76 @@
 .goods__price {
   text-align: right;
 }
+
+
+
+
+
+
+
+@media screen and (min-width: $tablet-width) {
+
+  .goods__heading {
+    font-size: 36px;
+    line-height: 36px;
+
+    margin-left: 67px;
+    margin-right: 20px;
+
+    border-bottom: none;
+
+    &::after {
+      left: 374px; // pp
+      top: 39%; // pp
+    }
+
+    &::before {
+      content: '';
+      display: block;
+
+      height: 3px;
+
+      position: absolute;
+      top: 39%;
+      left: -70px;
+      width: 30px;
+
+      background-color: $bg-others;
+    }
+
+  }
+
+  // .goods__table {
+  //   text-align: left;
+  //   padding: 0;
+
+  //   font-size: 14px;
+  //   line-height: 14px;
+
+  //   margin-bottom: 10px;
+  // }
+
+  // .goods ul,
+  // .goods td,
+  // .goods__param {
+  //   padding: 0;
+  //   margin: 0;
+  // }
+
+  // .goods__caption {
+  //   font-family: $data__heading;
+  //   font-size: 16px;
+  //   line-height: 20px;
+
+  //   margin-top: 11px; // pp
+  //   margin-bottom: 11px; // pp
+
+  //   text-align: left;
+  //   text-transform: uppercase;
+  // }
+
+  // .goods__price {
+  //   text-align: right;
+  // }
+
+}

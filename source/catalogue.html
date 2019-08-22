@@ -34,19 +34,13 @@
     <nav class="main-nav">
       <ul class="main-nav-list">
         <li class="main-nav-list__item">
-          <a href="index.html">
-            Главная
-          </a>
+          <a href="index.html">Главная</a>
         </li>
         <li class="main-nav-list__item main-nav-list__item--active">
-          <a>
-            Каталог продукции
-          </a>
+          <a>Каталог продукции</a>
         </li>
         <li class="main-nav-list__item">
-          <a href="#">
-            Подбор программы
-          </a>
+          <a href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -59,7 +53,7 @@
       <h1 class="catalog__heading">Каталог продукции</h1>
       <section class="catalog__product-cards">
         <h2 class="visually-hidden">Основные товары</h2>
-        <ul class="product-cards">
+        <ul class="catalog__list--product-cards">
           <li class="product-card product-card--main">
             <div class="product-card__description">
               <picture>
@@ -76,12 +70,10 @@
                 <table class="data__container">
                   <thead class="data__heading">
                     <tr>
-                      <th>
-                        Cat Energy Pro 500 г
-                      </th>
+                      <th>Cat Energy Pro 500 г</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="data__body">
                     <tr>
                       <td class="data__param">Объем</td>
                       <td class="data__value">500 г</td>
@@ -347,12 +339,13 @@
             <button class="product-card__button">Заказать</button>
           </li>
 
-          <li class="product-card product-card--main">
+          <li class="product-card product-card--main product-card--last">
 
             <div class="product-card__plus">
-              <svg width="30" height="35">
-                <use xlink:href="img/sprite.svg#icon-plus"></use>
-              </svg>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/plus.svg">
+                <img src="img/plus-mobile.svg" alt="Отображение большего количества товаров">
+              </picture>
             </div>
 
 
@@ -370,7 +363,7 @@
 
       <section class="catalog__goods goods">
         <h2 class="goods__heading">Дополнительные товары</h2>
-        <ul>
+        <ul class="catalog__list--goods">
           <li class="product-card product-card--goods">
             <table class="goods__table">
               <caption class="goods__caption">Сахарозаменитель</caption>
