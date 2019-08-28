@@ -53,7 +53,7 @@
       <h1 class="catalog__heading">Каталог продукции</h1>
       <section class="catalog__product-cards">
         <h2 class="visually-hidden">Основные товары</h2>
-        <ul class="catalog__list--product-cards">
+        <ul class="catalog__list">
           <li class="product-card product-card--main">
             <div class="product-card__description">
               <picture>
@@ -90,7 +90,7 @@
                 </table>
               </div>
             </div>
-            <button class="product-card__button">Заказать</button>
+            <button class="product-card__button button button--product-card">Заказать</button>
           </li>
 
           <li class="product-card product-card--main">
@@ -131,7 +131,7 @@
                 </table>
               </div>
             </div>
-            <button class="product-card__button">Заказать</button>
+            <button class="product-card__button button button--product-card">Заказать</button>
           </li>
 
           <li class="product-card product-card--main">
@@ -172,7 +172,7 @@
                 </table>
               </div>
             </div>
-            <button class="product-card__button">Заказать</button>
+            <button class="product-card__button button button--product-card">Заказать</button>
           </li>
 
           <li class="product-card product-card--main">
@@ -213,7 +213,7 @@
                 </table>
               </div>
             </div>
-            <button class="product-card__button">Заказать</button>
+            <button class="product-card__button button button--product-card">Заказать</button>
           </li>
 
           <li class="product-card product-card--main">
@@ -254,7 +254,7 @@
                 </table>
               </div>
             </div>
-            <button class="product-card__button">Заказать</button>
+            <button class="product-card__button button button--product-card">Заказать</button>
           </li>
 
           <li class="product-card product-card--main">
@@ -295,7 +295,7 @@
                 </table>
               </div>
             </div>
-            <button class="product-card__button">Заказать</button>
+            <button class="product-card__button button button--product-card">Заказать</button>
           </li>
 
           <li class="product-card product-card--main">
@@ -336,7 +336,7 @@
                 </table>
               </div>
             </div>
-            <button class="product-card__button">Заказать</button>
+            <button class="product-card__button button button--product-card">Заказать</button>
           </li>
 
           <li class="product-card product-card--main product-card--last">
@@ -355,7 +355,7 @@
               На самом деле вкусов гораздо больше!
             </p>
 
-            <button class="product-card__button product-card__button--more">Показать все</button>
+            <button class="button button--more">Показать все</button>
           </li>
 
         </ul>
@@ -363,70 +363,71 @@
 
       <section class="catalog__goods goods">
         <h2 class="goods__heading">Дополнительные товары</h2>
-        <ul class="catalog__list--goods">
-          <li class="product-card product-card--goods">
+        <ul class="goods__list">
+          <li class="goods__item">
             <table class="goods__table">
               <caption class="goods__caption">Сахарозаменитель</caption>
               <tbody>
-                <tr>
-                  <td class="goods__param">1 упаковка (100г)</td>
+                <tr class="goods__table-row">
+                  <td class="goods__param">1 упаковка (100 г)</td>
                   <td class="goods__price">100 ₽</td>
                 </tr>
               </tbody>
             </table>
-            <button class="product-card__button">Заказать</button>
+            <button class="button button--goods">Заказать</button>
           </li>
-          <li class="product-card product-card--goods">
+          <li class="goods__item">
             <table class="goods__table">
               <caption class="goods__caption">Питьевая вода</caption>
               <tbody>
-                <tr>
+                <tr class="goods__table-row">
                   <td class="goods__param">5 литров</td>
                   <td class="goods__price">50 ₽</td>
                 </tr>
               </tbody>
             </table>
-            <button class="product-card__button">Заказать</button>
+            <button class="button button--goods">Заказать</button>
           </li>
-          <li class="product-card product-card--goods">
+          <li class="goods__item">
             <table class="goods__table">
               <caption class="goods__caption">Молоко</caption>
               <tbody>
-                <tr>
+                <tr class="goods__table-row">
                   <td class="goods__param">1 литр</td>
                   <td class="goods__price">100 ₽</td>
                 </tr>
               </tbody>
             </table>
-            <button class="product-card__button">Заказать</button>
+            <button class="button button--goods">Заказать</button>
           </li>
-          <li class="product-card product-card--goods">
+          <li class="goods__item">
             <table class="goods__table">
               <caption class="goods__caption">Витамины</caption>
               <tbody>
-                <tr>
+                <tr class="goods__table-row">
                   <td class="goods__param">1 упаковка (30 г)</td>
                   <td class="goods__price">300 ₽</td>
                 </tr>
               </tbody>
             </table>
-            <button class="product-card__button">Заказать</button>
+            <button class="button button--goods">Заказать</button>
           </li>
         </ul>
-      </section>
 
-      <section class="catalog__gift gift">
-        <div class="gift__container">
-          <h2 class="visually-hidden">Подарок</h2>
-          <div class="gift__image">
-            <svg width="55" height="60">
-              <use xlink:href="img/sprite.svg#icon-gift"></use>
-            </svg>
+
+        <section class="catalog__gift gift">
+          <div class="gift__container">
+            <h2 class="visually-hidden">Подарок</h2>
+            <div class="gift__image">
+              <svg width="55" height="60">
+                <use xlink:href="img/sprite.svg#icon-gift"></use>
+              </svg>
+            </div>
+            <b class="gift__text">
+              Закажите все<br> и получите чехол для кота в подарок!
+            </b>
           </div>
-          <b class="gift__text">
-            Закажите все<br> и получите чехол для кота в подарок!
-          </b>
-        </div>
+        </section>
       </section>
     </article>
 

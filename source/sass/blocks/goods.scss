@@ -8,11 +8,26 @@
   margin-bottom: 10px;
 }
 
-.goods ul,
-.goods td,
+.goods__list,
+.goods__price,
 .goods__param {
   padding: 0;
   margin: 0;
+}
+
+
+
+.goods__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 20px;
+  margin-right: 20px;
+
+  padding-bottom: 18px; // pp
+
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .goods__caption {
@@ -67,6 +82,7 @@
 
 
 
+
 @media screen and (min-width: $tablet-width) {
 
   .goods__heading {
@@ -77,6 +93,8 @@
     margin-right: 20px;
 
     border-bottom: none;
+
+    margin-bottom: 37px;
 
     &::after {
       left: 374px; // pp
@@ -99,37 +117,55 @@
 
   }
 
-  // .goods__table {
-  //   text-align: left;
-  //   padding: 0;
+  .goods__list {
+    padding: 10px;
+  }
 
-  //   font-size: 14px;
-  //   line-height: 14px;
+  .goods__item {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -1px;
 
-  //   margin-bottom: 10px;
-  // }
+    height: 120px;
 
-  // .goods ul,
-  // .goods td,
-  // .goods__param {
-  //   padding: 0;
-  //   margin: 0;
-  // }
+    padding-bottom: 18px; // pp
 
-  // .goods__caption {
-  //   font-family: $data__heading;
-  //   font-size: 16px;
-  //   line-height: 20px;
+    border: 1px solid #cdcdcd;
+  }
 
-  //   margin-top: 11px; // pp
-  //   margin-bottom: 11px; // pp
+  .goods__table {
+    font-size: 16px;
+    line-height: 20px;
 
-  //   text-align: left;
-  //   text-transform: uppercase;
-  // }
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-  // .goods__price {
-  //   text-align: right;
-  // }
+    margin-top: 15px; // pp
+    margin-bottom: 15px; // pp
+  }
+
+  .goods__caption {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-top: 5px; // pp
+    margin-bottom: 11px; // pp
+    margin-left: 38px; // pp
+  }
+
+  .goods__table-row {
+    min-width: 263px; // pp
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 9px; // pp
+    margin-right: 39px; // pp
+  }
+
+  .goods__price {
+    min-width: 42px; // pp
+    padding-left: 50px;
+  }
 
 }
