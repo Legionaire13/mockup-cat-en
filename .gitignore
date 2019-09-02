@@ -5,7 +5,7 @@
 *.pdf
 *.psd
 *.sublime*
-artboards/
+*mockup/
 build/
 node_modules/
 source/css/*.css

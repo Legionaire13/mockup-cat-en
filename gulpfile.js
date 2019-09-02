@@ -192,7 +192,7 @@ gulp.task("serve", () => {
 
 
 
-// финальный набор
+// набор 1
 // gulp.task("build",
 //   gulp.series("clean",
 //     gulp.parallel(
@@ -204,13 +204,13 @@ gulp.task("serve", () => {
 //   ));
 
 
-// вариант 2
+// набор 2
 gulp.task("build",
   gulp.series("clean",
     gulp.parallel(
+      "images",
       "styling",
-      "scripts",
-      "images"
+      "scripts"
     ),
     "copy",
     gulp.parallel("svg-sprite", "webp"),
