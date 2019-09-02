@@ -89,7 +89,6 @@
     }
   }
 
-
   .product-card__description {
     display: flex;
     flex-direction: column;
@@ -110,6 +109,14 @@
     left: 165px;
 
     transform: translate(-50%, 0);
+
+    &--500g {
+      max-width: 161px;
+    }
+
+    &--1000g {
+      max-width: 195px;
+    }
   }
 
   .product-card__data {
