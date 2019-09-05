@@ -73,8 +73,11 @@
     min-height: 33px;
   }
 
-  .main-nav-list__item--active a {
-    border-bottom: 2px solid $bg-others;
+
+  .main-nav-list__item {
+    &--active a {
+      border-bottom: 2px solid $bg-others;
+    }
   }
 
 }
@@ -94,8 +97,10 @@
     color: #fff;
   }
 
-  .main-nav-list__item--active a {
-    border-bottom: 2px solid #fff;
+  .main-nav-list__item {
+    &--active a {
+      border-bottom: 2px solid #fff;
+    }
   }
 
 }

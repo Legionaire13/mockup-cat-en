@@ -78,8 +78,9 @@
   .address {
     position: absolute;
     width: 570px;
+    min-height: 200px;
 
-    top: 17.5%;
+    top: 17.0%;
     left: 7.7%;
 
     z-index: 1;

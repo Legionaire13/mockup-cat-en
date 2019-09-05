@@ -2,6 +2,8 @@
   text-align: left;
   padding: 0;
   padding-top: 18px;
+
+  width: 143px;
 }
 
 .data__heading {
@@ -31,7 +33,7 @@
 
 .data__value {
   text-align: right;
-  width: 35%;
+  width: auto;
 }
 
 
@@ -45,6 +47,8 @@
 
   .data {
     padding: 0;
+
+    width: 260px;
   }
 
   .data__container {
@@ -61,18 +65,9 @@
     line-height: 16px;
   }
 
-  .data__container tbody {
-    margin-top: 20px;
-  }
-
   .data__heading {
     font-size: 20px;
     line-height: 20px;
-  }
-
-  .data__heading tr {
-    display: flex;
-    justify-content: center;
   }
 
   .data__heading th {
@@ -82,7 +77,7 @@
     width: 140px;
     text-align: center;
 
-    transform: translate(32%);
+    transform: translate(41%);
   }
 
   // подчеркивание
@@ -101,6 +96,62 @@
 
       background-color: #cdcdcd;
     }
+  }
+
+}
+
+
+
+
+
+
+
+// desktops
+@media screen and (min-width: $desktop-width) {
+
+  .data {
+    width: 245px;
+  }
+
+  .data__container {
+    width: 245px;
+    min-height: 150px;
+
+    margin: 0 auto;
+  }
+
+  .data__heading th {
+    width: 140px; // сохраняет форму текста
+
+    transform: translate(37%);
+  }
+
+  .data__container td {
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 5px;
+  }
+
+  // подчеркивание
+  .data__param {
+    width: 140px;
+
+    &::after {
+      width: 170px;
+      left: 35px;
+    }
+  }
+
+  .data__param span {
+    padding-left: 35px;  // pp
+  }
+
+  .data__value {
+    width: 100px;
+  }
+
+  .data__value span {
+    padding-right: 38px; // pp
   }
 
 }

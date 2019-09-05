@@ -119,6 +119,9 @@
 
   .goods__list {
     padding: 10px;
+
+    max-width: $tablet-width;
+    margin: 0 auto;
   }
 
   .goods__item {

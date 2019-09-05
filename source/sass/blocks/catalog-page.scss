@@ -1,0 +1,21 @@
+
+//desktops
+@media screen and (min-width: $desktop-width) {
+
+  .catalog-page .page-header {
+
+    &::after {
+      background: none;
+    }
+
+  }
+
+  .catalog-page .main-nav-list__item a {
+    color: $font-dark;
+  }
+
+  .catalog-page .main-nav-list__item--active a {
+    border-bottom: 2px solid $bg-others;
+  }
+
+}

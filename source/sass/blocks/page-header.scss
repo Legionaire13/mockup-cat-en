@@ -84,7 +84,7 @@
     padding-right: 30px;
     padding-bottom: 28px;
 
-    max-width: $tablet-width;
+    max-width: 1092px; // резиновый вариант на три ряда
   }
 
   .page-header__logo {
@@ -117,6 +117,13 @@
 }
 
 
+
+
+
+
+
+
+
 //      desktop
 @media screen and (min-width: $desktop-width) {
 
@@ -128,6 +135,10 @@
     padding-right: 0;
     padding-bottom: 20px;
 
+    margin: 0 auto;
+    // margin-left: 110px;
+    // margin-right: 100px;
+
     &::after {
       content: "";
       display: block;
@@ -135,7 +146,7 @@
       width: 50%;
       height: 696px;
 
-      background-color: #65a93c; //fallback
+      background-color: #65a93c; // color fallback
       background-image: url(../img/index-bg.jpg);
       background-repeat: no-repeat;
       background-position: 100% 0;
@@ -145,6 +156,7 @@
       top: 0;
       right: 0;
     }
+
   }
 
   .page-header__logo {
