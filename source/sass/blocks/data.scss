@@ -33,7 +33,7 @@
 
 .data__value {
   text-align: right;
-  width: auto;
+  width: 60px;
 }
 
 
@@ -98,6 +98,10 @@
     }
   }
 
+  .data__value {
+    width: 100px;
+  }
+
 }
 
 
@@ -144,10 +148,6 @@
 
   .data__param span {
     padding-left: 35px;  // pp
-  }
-
-  .data__value {
-    width: 100px;
   }
 
   .data__value span {

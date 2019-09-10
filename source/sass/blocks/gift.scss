@@ -19,7 +19,7 @@
 }
 
 .gift__image {
-  width: 280px;
+  width: 55px;
   height: 190px;
 
   display: flex;
@@ -99,6 +99,56 @@
 
   .gift__container {
     background-image: url(../img/gift-photo-tablet@2x.jpg);
+  }
+
+}
+
+
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .gift__container {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-width: 245px;
+    min-height: 289px;
+
+    margin: 0;
+
+    background-image: url(../img/gift-photo-desktop.jpg);
+    background-size: cover;
+  }
+
+  .gift__image {
+    width: 55px;
+    height: 186px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .gift__text {
+    text-align: center;
+    margin: 0;
+  }
+
+}
+
+// responsive for desktops
+@media screen and (min-width: 1440px) and (min-resolution: 1.5dppx) {
+
+  .gift__container {
+    background-image: url(../img/gift-photo-desktop@2x.jpg);
   }
 
 }

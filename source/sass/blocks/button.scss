@@ -44,3 +44,25 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+// desktops
+@media screen and (min-width: $desktop-width) {
+
+  .button {
+    &--goods {
+      width: 245px;
+      height: 40px;
+      
+      margin: 0;
+    }
+  }
+
+}

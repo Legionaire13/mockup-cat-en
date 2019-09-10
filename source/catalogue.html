@@ -243,7 +243,7 @@
                 <source media="(min-width: 768px)" srcset="img/catalog-5-tablet@2x.png, img/catalog-5-tablet.png">
                 <source media="(max-width: 767px)" type="image/webp"
                   srcset="img/catalog-5-mobile@2x.webp 2x, img/catalog-5-mobile.webp">
-                  <source media="(max-width: 767px)" srcset="img/catalog-5-mobile@2x.jpg, img/catalog-5-mobile.jpg">
+                <source media="(max-width: 767px)" srcset="img/catalog-5-mobile@2x.jpg, img/catalog-5-mobile.jpg">
                 <img class="product-card__image product-card__image--500g" width="140" height="144"
                   src="img/catalog-5-mobile.jpg" alt="Питание из курицы">
               </picture>
@@ -288,7 +288,7 @@
                 <source media="(min-width: 768px)" srcset="img/catalog-6-tablet@2x.png, img/catalog-6-tablet.png">
                 <source media="(max-width: 767px)" type="image/webp"
                   srcset="img/catalog-6-mobile@2x.webp 2x, img/catalog-6-mobile.webp">
-                  <source media="(max-width: 767px)" srcset="img/catalog-6-mobile@2x.jpg, img/catalog-6-mobile.jpg">
+                <source media="(max-width: 767px)" srcset="img/catalog-6-mobile@2x.jpg, img/catalog-6-mobile.jpg">
                 <img class="product-card__image" width="140" height="144" src="img/catalog-6-mobile.jpg"
                   alt="Питание из курицы">
               </picture>
@@ -333,7 +333,7 @@
                 <source media="(min-width: 768px)" srcset="img/catalog-7-tablet@2x.png, img/catalog-7-tablet.png">
                 <source media="(max-width: 767px)" type="image/webp"
                   srcset="img/catalog-7-mobile@2x.webp 2x, img/catalog-7-mobile.webp">
-                  <source media="(max-width: 767px)" srcset="img/catalog-7-mobile@2x.jpg, img/catalog-7-mobile.jpg">
+                <source media="(max-width: 767px)" srcset="img/catalog-7-mobile@2x.jpg, img/catalog-7-mobile.jpg">
                 <img class="product-card__image product-card__image--500g" width="140" height="144"
                   src="img/catalog-7-mobile.jpg" alt="Питание из курицы">
               </picture>
@@ -372,7 +372,7 @@
             <div class="product-card__plus">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/plus.svg">
-                <img src="img/plus-mobile.svg" alt="Отображение большего количества товаров">
+                <img src="img/plus-mobile.svg" alt="Отображение большего количества товаров" loading="lazy">
               </picture>
             </div>
 
@@ -390,72 +390,75 @@
       </section>
 
       <section class="catalog__goods goods">
-        <h2 class="goods__heading">Дополнительные товары</h2>
-        <ul class="goods__list">
-          <li class="goods__item">
-            <table class="goods__table">
-              <caption class="goods__caption">Сахарозаменитель</caption>
-              <tbody>
-                <tr class="goods__table-row">
-                  <td class="goods__param">1 упаковка (100 г)</td>
-                  <td class="goods__price">100 ₽</td>
-                </tr>
-              </tbody>
-            </table>
-            <button class="button button--goods">Заказать</button>
-          </li>
-          <li class="goods__item">
-            <table class="goods__table">
-              <caption class="goods__caption">Питьевая вода</caption>
-              <tbody>
-                <tr class="goods__table-row">
-                  <td class="goods__param">5 литров</td>
-                  <td class="goods__price">50 ₽</td>
-                </tr>
-              </tbody>
-            </table>
-            <button class="button button--goods">Заказать</button>
-          </li>
-          <li class="goods__item">
-            <table class="goods__table">
-              <caption class="goods__caption">Молоко</caption>
-              <tbody>
-                <tr class="goods__table-row">
-                  <td class="goods__param">1 литр</td>
-                  <td class="goods__price">100 ₽</td>
-                </tr>
-              </tbody>
-            </table>
-            <button class="button button--goods">Заказать</button>
-          </li>
-          <li class="goods__item">
-            <table class="goods__table">
-              <caption class="goods__caption">Витамины</caption>
-              <tbody>
-                <tr class="goods__table-row">
-                  <td class="goods__param">1 упаковка (30 г)</td>
-                  <td class="goods__price">300 ₽</td>
-                </tr>
-              </tbody>
-            </table>
-            <button class="button button--goods">Заказать</button>
-          </li>
-        </ul>
+        <div class="goods__wrapper">
+          <h2 class="goods__heading">Дополнительные товары</h2>
 
+          <ul class="goods__list">
+            <li class="goods__item">
+              <table class="goods__table">
+                <caption class="goods__caption">Сахарозаменитель</caption>
+                <tbody>
+                  <tr class="goods__table-row">
+                    <td class="goods__param">1 упаковка (100 г)</td>
+                    <td class="goods__price">100 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="button button--goods">Заказать</button>
+            </li>
+            <li class="goods__item">
+              <table class="goods__table">
+                <caption class="goods__caption">Питьевая вода</caption>
+                <tbody>
+                  <tr class="goods__table-row">
+                    <td class="goods__param">5 литров</td>
+                    <td class="goods__price">50 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="button button--goods">Заказать</button>
+            </li>
+            <li class="goods__item">
+              <table class="goods__table">
+                <caption class="goods__caption">Молоко</caption>
+                <tbody>
+                  <tr class="goods__table-row">
+                    <td class="goods__param">1 литр</td>
+                    <td class="goods__price">100 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="button button--goods">Заказать</button>
+            </li>
+            <li class="goods__item">
+              <table class="goods__table">
+                <caption class="goods__caption">Витамины</caption>
+                <tbody>
+                  <tr class="goods__table-row">
+                    <td class="goods__param">1 упаковка (30 г)</td>
+                    <td class="goods__price">300 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="button button--goods">Заказать</button>
+            </li>
+          </ul>
 
-        <section class="catalog__gift gift">
-          <div class="gift__container">
-            <h2 class="visually-hidden">Подарок</h2>
-            <div class="gift__image">
-              <svg width="55" height="60">
-                <use xlink:href="img/sprite.svg#icon-gift"></use>
-              </svg>
+          <section class="catalog__gift gift">
+            <div class="gift__container">
+              <h2 class="visually-hidden">Подарок</h2>
+              <div class="gift__image">
+                <svg width="55" height="60">
+                  <use xlink:href="img/sprite.svg#icon-gift"></use>
+                </svg>
+              </div>
+              <b class="gift__text">
+                Закажите все<br> и получите чехол для кота в подарок!
+              </b>
             </div>
-            <b class="gift__text">
-              Закажите все<br> и получите чехол для кота в подарок!
-            </b>
-          </div>
-        </section>
+          </section>
+
+        </div>
       </section>
     </article>
 
@@ -469,7 +472,7 @@
       <b class="address__call">
         Приглашаем <br>к сотрудничеству <br>дилеров!
       </b>
-      <address class="address__text">ул. Большая <br> Конюшенная, д. 19/8 <br> <br class="address--mobile-only">
+      <address class="address__text">ул. Большая <br> Конюшенная, д. 19/8 <br> <br class="address--non-mobile">
         Санкт-Петербург</address>
     </div>
 
@@ -479,7 +482,8 @@
         <source media="(min-width: 768px)" srcset="img/map-pin-tab&dtp@2x.png 2x, img/map-pin-tab&dtp.png">
         <source srcset="img/map-pin-mobile@2x.webp 2x, img/map-pin-mobile.webp">
         <source srcset="img/map-pin-mobile@2x.jpg 2x, img/map-pin-mobile.jpg">
-        <img class="pin" width="55" height="53" src="img/map-pin-mobile.jpg" alt="Маркер здания на карте">
+        <img class="pin" width="55" height="53" src="img/map-pin-mobile.jpg" alt="Маркер здания на карте"
+          loading="lazy">
       </picture>
 
       <!-- карта резиновая - потому размеры большие у изображений -->
@@ -490,7 +494,8 @@
         <source media="(min-width: 768px)" srcset="img/map-tablet@2x.webp 2x, img/map-tablet.webp">
         <source srcset="img/map-mobile@2x.webp 2x, img/map-mobile.webp">
         <source srcset="img/map-mobile@2x.jpg 2x, img/map-mobile.jpg">
-        <img class="map" src="img/map-mobile.jpg" alt="Карта проезда: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        <img class="map" src="img/map-mobile.jpg" alt="Карта проезда: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
+          loading="lazy">
       </picture>
 
       <!-- real google maps iframe-->
@@ -503,7 +508,8 @@
 
     <div class="page-footer__bottom-wrapper">
       <div class="page-footer__logo-headline">
-        <img src="img/logo-mobile-name.svg" width="128" height="24" alt="Cat Energy - функциональное питание для котов">
+        <img src="img/logo-mobile-name.svg" width="128" height="24" alt="Cat Energy - функциональное питание для котов"
+          loading="lazy">
       </div>
 
       <hr class="divider divider--mobile-only">

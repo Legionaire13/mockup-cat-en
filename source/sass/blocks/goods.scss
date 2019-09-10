@@ -1,3 +1,24 @@
+.goods {
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+
+    height: 3px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 21px; // pp
+
+    z-index: -1;
+
+    background-color: $bg-others;
+  }
+}
+
 .goods__table {
   text-align: left;
   padding: 0;
@@ -15,8 +36,6 @@
   margin: 0;
 }
 
-
-
 .goods__item {
   display: flex;
   flex-direction: column;
@@ -28,6 +47,10 @@
   padding-bottom: 18px; // pp
 
   border-bottom: 1px solid #cdcdcd;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
 }
 
 .goods__caption {
@@ -46,30 +69,17 @@
   font-size: 24px;
   line-height: 24px;
 
-  margin-left: 20px;
+  width: 247px; // pp
+
+  margin-left: 0;
   margin-right: 20px;
   margin-bottom: 0; // необходимо для соответствия макету
 
+  padding-left: 20px;
   padding-top: 8px;
   padding-bottom: 33px;
 
-  position: relative;
-
-  border-bottom: 1px solid #e6e6e6;
-
-  &::after {
-    content: '';
-    display: block;
-
-    height: 3px;
-
-    position: absolute;
-    left: 247px; // pp
-    top: 33%; // pp
-    right: -20px;
-
-    background-color: $bg-others;
-  }
+  background-color: #fff;
 }
 
 .goods__price {
@@ -82,39 +92,25 @@
 
 
 
-
+//      tablets
 @media screen and (min-width: $tablet-width) {
+
+  .goods {
+    &::after {
+      top: 32px; // pp
+    }
+  }
 
   .goods__heading {
     font-size: 36px;
     line-height: 36px;
 
-    margin-left: 67px;
-    margin-right: 20px;
+    width: 374px;
 
-    border-bottom: none;
+    margin-left: 27px;
+    margin-bottom: 39px; // pp
 
-    margin-bottom: 37px;
-
-    &::after {
-      left: 374px; // pp
-      top: 39%; // pp
-    }
-
-    &::before {
-      content: '';
-      display: block;
-
-      height: 3px;
-
-      position: absolute;
-      top: 39%;
-      left: -70px;
-      width: 30px;
-
-      background-color: $bg-others;
-    }
-
+    padding-left: 40px;
   }
 
   .goods__list {
@@ -169,6 +165,92 @@
   .goods__price {
     min-width: 42px; // pp
     padding-left: 50px;
+  }
+
+}
+
+
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .goods {
+    margin-top: 60px;
+    margin-bottom: 75px; // подобрать
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .goods__heading {
+    width: 374px;
+
+    margin-left: -40px;
+    margin-top: 0;
+    margin-bottom: 40px; // pp
+
+    padding-left: 40px;
+  }
+
+  .goods__list {
+    width: 895px; // pp (по макету)
+
+    max-width: 100%;
+
+    padding: 0;
+
+    margin: 0;
+    margin-top: -1px; // pp
+  }
+
+  .goods__item {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
+
+    height: 71px;
+
+    margin: 0;
+    padding: 0; // подобрать ?
+  }
+
+  .goods__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+
+    height: 426px; // pp
+
+    padding-right: 110px;
+    padding-left: 110px;
+
+    max-width: 1240px;
+
+    // background-color: navy; // to del
+  }
+
+  .goods__caption {
+    min-width: 325px;
+
+    margin-left: 0;
+  }
+
+  .goods__param {
+    text-align: left;
+    min-width: 195px;
+  }
+
+  .goods__price {
+    text-align: left;
   }
 
 }

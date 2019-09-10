@@ -7,6 +7,10 @@
   min-height: 115px;
 
   background-color: $bg-primary;
+
+  &--non-mobile {
+    display: none;
+  }
 }
 
 .address__call {
@@ -29,10 +33,6 @@
   margin-right: 25px;
 }
 
-.address--mobile-only {
-  display: none;
-}
-
 .catalog-page .address {
   background-color: $bg-secondary;
 }
@@ -44,6 +44,10 @@
   .address {
     height: 200px;
     padding-top: 3px; // pp
+
+    &--non-mobile {
+      display: block;
+    }
   }
 
   .address__call {
@@ -61,10 +65,6 @@
     text-align: right;
 
     margin-right: 70px;
-  }
-
-  .address--mobile-only {
-    display: block;
   }
 
 }
@@ -93,6 +93,10 @@
   .address__text {
     text-align: left;
     margin-right: 5px;
+  }
+
+  .catalog-page .address {
+    background-color: $bg-primary;
   }
 
 }
