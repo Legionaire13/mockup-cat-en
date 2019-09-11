@@ -8,7 +8,7 @@
 
   background-color: $bg-primary;
 
-  &--non-mobile {
+  &--mobile-only {
     display: none;
   }
 }
@@ -38,6 +38,12 @@
 }
 
 
+
+
+
+
+
+
 //      tablets
 @media screen and (min-width: $tablet-width) {
 
@@ -45,7 +51,7 @@
     height: 200px;
     padding-top: 3px; // pp
 
-    &--non-mobile {
+    &--mobile-only {
       display: block;
     }
   }
@@ -68,6 +74,9 @@
   }
 
 }
+
+
+
 
 
 
