@@ -31,7 +31,7 @@
   display: block;
 
   margin-top: 40px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .page-footer__logo-headline img {
@@ -112,6 +112,10 @@
     position: relative;
   }
 
+  .page-footer__map {
+    height: 400px;
+  }
+
   .page-footer .pin {
     top: 38.2%; // pp
     left: 70.1%; // pp
@@ -121,7 +125,6 @@
   }
 
   .page-footer__bottom-wrapper {
-    height: 160px;
     max-width: 1440px;
 
     margin: 0 auto;

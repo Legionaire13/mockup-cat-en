@@ -26,6 +26,11 @@
   &--goods {
     margin: 0;
   }
+
+  &--feedback {
+    margin-bottom: 20px;
+    width: 280px;
+  }
 }
 
 
@@ -60,7 +65,7 @@
     &--goods {
       width: 245px;
       height: 40px;
-      
+
       margin: 0;
     }
   }

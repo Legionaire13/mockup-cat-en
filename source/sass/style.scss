@@ -47,7 +47,9 @@ h6 {
   font-style: normal;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -66,38 +68,41 @@ h6 {
 .divider {
   background-color: #444444;
   margin: 0 auto;
-  min-width: 80%;
-
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 100%;
 
   height: 1px;
   border: none;
   opacity: 0.1;
-}
 
-.divider--tablet-only {
-  display: none;
-  margin: 0;
-}
+  &--tablet-only {
+    display: none;
+    margin: 0;
+  }
 
-.divider--mobile-only {
-  display: none;
+  &--mobile-only {
+    display: none;
+  }
+
+  &--footer {}
 }
 
 @media screen and (max-width: $tablet-width - 1px) {
 
-  .divider--mobile-only {
-    display: block;
+  .divider {
+    &--mobile-only {
+      display: block;
+    }
   }
 
 }
 
 @media screen and (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
 
-  .divider--tablet-only {
-    display: block;
-    width: 100%;
+  .divider {
+    &--tablet-only {
+      display: block;
+      width: 100%;
+    }
   }
 
 }

@@ -9,9 +9,8 @@
 .slider__container {
   position: relative;
 
-  min-width: 280px;
   min-height: 240px;
-  max-width: 385px;
+  width: 320px;
 
   margin: 0 auto;
 }
@@ -25,8 +24,8 @@
   position: absolute;
 
   background: $bg-secondary url(../img/cat-before-mobile.png) no-repeat;
-  background-position: 50% 0%;
-  background-size: contain;
+  background-position: 2px 8px;
+  background-size: 310px auto;
 }
 
 .slider__cat-after {
@@ -38,8 +37,8 @@
   position: absolute;
 
   background: $bg-secondary url(../img/cat-after-mobile.png) no-repeat;
-  background-position: 50% 0%;
-  background-size: contain;
+  background-position: 2px 8px;
+  background-size: 310px auto;
 }
 
 .slider__controls {
@@ -53,14 +52,15 @@
 
   text-align: center;
 
-  min-width: 280px;
-  max-width: 385px;
+  width: 200px;
+  padding-left: 5px; // pp
 
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 32px;
+  margin-bottom: 16px;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -71,9 +71,10 @@
   width: 84px;
   height: 14px;
 
-  border-radius: 7px;
+  margin-left: 20px;
+  margin-right: 20px;
 
-  margin: 20px;
+  border-radius: 7px;
 
   cursor: pointer;
 
@@ -84,9 +85,10 @@
     width: 35px;
     height: 6px;
 
+    border-radius: 3px;
     background-color: $bg-others;
 
-    border-radius: 3px;
+    transform: translateX(-2px);
   }
 }
 
@@ -95,14 +97,14 @@
 
   .slider__cat-before {
     background: $bg-secondary url(../img/cat-before-mobile@2x.png) no-repeat;
-    background-position: 50% 0%;
-    background-size: contain;
+    background-position: 2px 8px;
+    background-size: 310px auto;
   }
 
   .slider__cat-after {
     background: $bg-secondary url(../img/cat-after-mobile@2x.png) no-repeat;
-    background-position: 50% 0%;
-    background-size: contain;
+    background-position: 2px 8px;
+    background-size: 310px auto;
   }
 
 }
@@ -128,20 +130,20 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0 170px;
-  }
 
-  .slider--tab-desktop {
-    display: block;
-  }
+    &--tab-desktop {
+      display: block;
+    }
 
-  .slider--mob {
-    display: none;
+    &--mob {
+      display: none;
+    }
   }
 
   .slider__container {
     position: relative;
 
-    max-width: 768px;
+    width: 768px;
     height: 631px;
 
     margin: 0 auto;
@@ -176,7 +178,13 @@
     font-size: 20px;
     line-height: 20px;
 
-    max-width: 708px;
+    display: flex;
+    justify-content: center;
+
+    width: 708px;
+
+    margin: 0;
+    padding: 0;
 
     position: absolute;
     left: 50%;
@@ -208,7 +216,6 @@
 
   .slider__controls input[type=range] {
     -webkit-appearance: none;
-    // margin: 18px 0;
     width: 425px;
     background-color: transparent; // для moz
   }

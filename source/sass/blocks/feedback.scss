@@ -1,0 +1,50 @@
+.feedback {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-family;
+
+  margin-bottom: 30px;
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--required {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.feedback__heading {
+  font-size: 36px;
+  line-height: 60px;
+
+  padding: 15px;
+  padding-left: 20px;
+
+  margin: 0;
+}
+
+.feedback__proposal {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-family;
+
+  text-transform: uppercase;
+
+  padding: 20px;
+  padding-top: 10px;
+
+  display: inline-block;
+}
+
+.feedback__required {
+  width: 320px;
+  margin: 0;
+
+  text-align: center;
+
+  font-family: $font-family-common;
+}
+

@@ -1,0 +1,104 @@
+.goods-to-add {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+
+  min-height: 130px;
+
+  border: none;
+
+  position: relative;
+
+  // зеленая полоска
+  &::before {
+    content: '';
+    display: block;
+
+    height: 3px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15px; // pp
+
+    z-index: -1;
+
+    background-color: $bg-others;
+  }
+}
+
+.goods-to-add__headline {
+  font-size: 24px;
+  line-height: 24px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: #ffffff;
+}
+
+.goods-to-add__list {
+  padding: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+
+  list-style: none;
+
+  min-width: 280px;
+  // max-width: 385px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.goods-to-add__item {
+  text-transform: uppercase;
+  font-size: 16px;
+
+  margin-bottom: 25px;
+
+  position: relative;
+}
+
+.goods-to-add__label {
+  display: flex;
+  align-items: center;
+
+  margin-left: 45px;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    left: -1px;
+    top: -6px;
+
+    border: 1px solid #cdcdcd;
+  }
+}
+
+.goods-to-add__input:checked + .goods-to-add__label::after {
+  content: "";
+  display: block;
+
+  width: 21px;
+  height: 16px;
+
+  background: url(../../img/tick.svg) no-repeat 50% 50%;
+
+  position: absolute;
+  left: 5px;
+  top: 2px;
+}
