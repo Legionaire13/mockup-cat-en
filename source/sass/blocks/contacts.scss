@@ -113,7 +113,7 @@
 
   text-transform: uppercase;
 
-  border:1px solid #cdcdcd;
+  border: 1px solid #cdcdcd;
 
   &:focus {
     color: #444444;
@@ -122,4 +122,84 @@
   @include placeholder {
     color: #444444;
   }
+}
+
+
+
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .contacts {
+    margin-top: 74px;
+    align-items: center;
+
+    // зеленая полоска
+    &::before {
+      top: 22px; // pp
+    }
+  }
+
+  .contacts__headline {
+    font-size: 36px;
+    line-height: 36px;
+
+    max-width: 688px; // pp
+
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 30px;
+
+    background-color: #ffffff;
+  }
+
+  .contacts__list {
+    align-items: center;
+
+    margin-top: 64px;
+  }
+
+  .contacts__item {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-bottom: 8px;
+
+    width: 635px;
+  }
+
+  .contacts__label {
+    &::after {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+
+    &--email span{
+      margin-left: 3px; // pp
+      margin-right: -5px; // pp
+    }
+
+    &--email::after {
+      background-size: 17px 13px;
+    }
+
+    &--phone::after {
+      background-size: 20px 20px;
+    }
+  }
+
+  .contacts__label span {
+    min-width: 70px;
+  }
+
+  .contacts__input {
+    padding: 10px;
+    padding-left: 20px; // pp
+    padding-right: 45px;
+    margin-left: 17px; // pp
+  }
+
 }

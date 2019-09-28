@@ -40,7 +40,6 @@
 
 .comment__textarea {
   min-width: 280px;
-  // max-width: 485px;
   width: calc(100% - 40px);
   height: 150px;
 
@@ -65,5 +64,50 @@
   @include placeholder {
     color: #444444;
     text-transform: uppercase;
+  }
+}
+
+
+
+
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .comment {
+    margin-top: 50px;
+
+    // зеленая полоска
+    &::before {
+      left: 0;
+      right: 0;
+      top: 21px; // pp
+    }
+  }
+
+  .comment__headline {
+    font-size: 36px;
+    line-height: 36px;
+
+    padding-left: 40px;
+    padding-right: 38px;
+
+    margin-left: 30px;
+  }
+
+  .comment__textarea {
+    width: calc(100% - 136px);
+    max-width: 630px;
+    height: 175px;
+
+    margin: 0 auto; // проверить как работает флекс
+    margin-top: 75px; // pp
+    padding: 20px; // pp
+    padding-top: 10px; // pp
+
+    font-size: 20px;
+    line-height: 30px;
   }
 }

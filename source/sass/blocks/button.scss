@@ -46,6 +46,15 @@
     margin: 0;
     margin-left: 38px; // pp
     margin-right: 37px; // pp
+
+    &--feedback {
+      font-size: 20px;
+
+      width: 283px;
+      height: 52px;
+
+      margin: 0;
+    }
   }
 
 }

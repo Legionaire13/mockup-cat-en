@@ -13,12 +13,11 @@
   margin-bottom: 8px; // pp
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 6px;
+  margin-top: 7px;
 
   list-style: none;
 
   min-width: 280px;
-  // max-width: 385px;
 
   display: flex;
   flex-direction: column;
@@ -61,5 +60,41 @@
 
   @include placeholder {
     color: #444444;
+  }
+}
+
+
+
+
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .cat-profile {
+    width: 630px;
+  }
+
+  .cat-profile__list {
+    padding: 0;
+    margin: 0;
+    margin-top: 29px;
+
+    min-height: 190px;
+  }
+
+  .cat-profile__item {
+    margin-bottom: 8px; // pp
+
+    font-size: 20px;
+  }
+
+  .cat-profile__input {
+    padding: 10px;
+    padding-left: 18px; // pp
+    margin-left: 20px; // pp
+
+    border: 1px solid #cdcdcd;
   }
 }

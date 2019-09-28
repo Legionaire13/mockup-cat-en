@@ -89,7 +89,7 @@
   }
 }
 
-.goods-to-add__input:checked + .goods-to-add__label::after {
+.goods-to-add__input:checked+.goods-to-add__label::after {
   content: "";
   display: block;
 
@@ -101,4 +101,69 @@
   position: absolute;
   left: 5px;
   top: 2px;
+}
+
+
+
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .goods-to-add {
+    margin-top: 65px;
+
+
+    // зеленая полоска
+    &::before {
+      left: 0;
+      right: 0;
+      top: 21px; // pp
+    }
+  }
+
+  .goods-to-add__headline {
+    font-size: 36px;
+    line-height: 36px;
+
+    padding-left: 40px; // pp
+    padding-right: 40px; // pp
+
+    margin-left: 30px;
+  }
+
+  .goods-to-add__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 604px;
+
+    margin: 0 auto;
+    margin-top: 66px;
+  }
+
+  .goods-to-add__item {
+    font-size: 20px;
+
+    width: 260px;
+
+    margin-bottom: 54px;
+  }
+
+  .goods-to-add__label {
+    &::before {
+      width: 40px;
+      height: 40px;
+
+      left: -13px;
+      top: -11px;
+    }
+  }
+
+  .goods-to-add__input:checked + .goods-to-add__label::after {
+    left: -2px;
+  }
+
 }

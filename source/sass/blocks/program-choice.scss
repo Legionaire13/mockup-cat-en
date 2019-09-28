@@ -22,7 +22,6 @@
   list-style: none;
 
   min-width: 280px;
-  // max-width: 385px;
 
   display: flex;
   flex-direction: column;
@@ -76,5 +75,54 @@
   position: absolute;
   left: 9px;
   top: 4px;
+}
+
+
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .program-choice {
+    width: 630px;
+    height: 196px;
+
+    margin-top: 65px;
+
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
+  }
+
+  .program-choice__list {
+    margin-top: 8px;
+  }
+
+  .program-choice__item {
+    font-size: 20px;
+
+    margin-bottom: 35px;
+  }
+
+  .program-choice__label {
+    margin-left: 68px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+
+      left: 8px;
+      top: -11px;
+    }
+  }
+
+  .program-choice__input:checked + .program-choice__label::after {
+    width: 18px;
+    height: 18px;
+
+    left: 20px;
+    top: 1px;
+  }
+
 }
 

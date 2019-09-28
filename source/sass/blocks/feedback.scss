@@ -13,6 +13,7 @@
   &--required {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -48,3 +49,56 @@
   font-family: $font-family-common;
 }
 
+
+
+
+//      tablets
+@media screen and (min-width: $tablet-width) {
+
+  .feedback {
+    margin-bottom: 72px;
+  }
+
+  .feedback__wrapper {
+    align-items: center;
+  }
+
+  .feedback__heading {
+    font-size: 60px;
+    line-height: 60px;
+
+    padding: 25px;
+    padding-left: 29px;
+  }
+
+  .feedback__proposal {
+    font-size: 20px;
+    line-height: 30px;
+
+    padding: 25px;
+    padding-top: 31px;
+    padding-left: 70px;
+  }
+
+  .feedback__wrapper {
+    &--required {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+
+      max-width: 626px;
+
+      margin: 0 auto;
+      margin-top: 12px;
+    }
+  }
+
+  .feedback__required {
+    width: 282px;
+
+    font-size: 16px;
+    line-height: 16px;
+
+    text-align: left;
+  }
+}

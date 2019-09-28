@@ -91,6 +91,7 @@ input[type="radio"].visually-hidden {
   .divider {
     &--mobile-only {
       display: block;
+      width: calc(100% - 40px);
     }
   }
 

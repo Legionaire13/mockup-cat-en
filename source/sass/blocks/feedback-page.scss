@@ -1,0 +1,16 @@
+//       mob and tablets
+.feedback-page .address {
+  background-color: $bg-secondary;
+}
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .feedback-page .address {
+    background-color: $bg-primary;
+  }
+
+}
