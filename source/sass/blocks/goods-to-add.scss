@@ -167,3 +167,28 @@
   }
 
 }
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .goods-to-add__headline {
+    margin-left: 70px;
+  }
+
+  .goods-to-add__list {
+    width: 1220px;
+
+    margin-top: 68px;
+  }
+
+  .goods-to-add__item {
+    width: 230px;
+
+    margin-left: 11px;
+  }
+
+}

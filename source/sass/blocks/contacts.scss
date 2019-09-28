@@ -203,3 +203,35 @@
   }
 
 }
+
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .contacts {
+    margin-top: 55px;
+  }
+
+  .contacts__headline {
+    margin-left: 68px;
+  }
+
+  .contacts__list {
+    flex-direction: row;
+    justify-content: space-between;
+
+    max-width: 1220px;
+
+    margin: 0 auto;
+    margin-top: 36px;
+  }
+
+  .contacts__item {
+    width: 570px;
+  }
+
+}

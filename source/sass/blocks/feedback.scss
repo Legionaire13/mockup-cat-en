@@ -21,10 +21,8 @@
   font-size: 36px;
   line-height: 60px;
 
-  padding: 15px;
-  padding-left: 20px;
-
-  margin: 0;
+  margin: 15px;
+  margin-left: 20px;
 }
 
 .feedback__proposal {
@@ -34,8 +32,8 @@
 
   text-transform: uppercase;
 
-  padding: 20px;
-  padding-top: 10px;
+  margin: 20px;
+  margin-top: 10px;
 
   display: inline-block;
 }
@@ -67,17 +65,19 @@
     font-size: 60px;
     line-height: 60px;
 
-    padding: 25px;
-    padding-left: 29px;
+    padding: 0;
+    margin: 25px;
+    margin-left: 30px;
   }
 
   .feedback__proposal {
     font-size: 20px;
     line-height: 30px;
 
-    padding: 25px;
-    padding-top: 31px;
-    padding-left: 70px;
+    margin: 25px;
+    margin-top: 31px;
+    margin-left: 30px;
+    padding-left: 40px;
   }
 
   .feedback__wrapper {
@@ -100,5 +100,51 @@
     line-height: 16px;
 
     text-align: left;
+  }
+}
+
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .feedback__heading {
+    margin: 53px auto; // pp
+    width: 1220px;
+  }
+
+  .feedback__proposal {
+    display: block;
+    width: 1258px;
+    margin: 0 auto;
+    // margin-top: 3px; // pp
+  }
+
+
+  .feedback__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    max-width: 1220px;
+    margin: 0 auto;
+    margin-top: 54px;
+
+    &--required {
+      max-width: 1220px;
+
+      margin-top: 20px;
+      margin-bottom: 82px;
+    }
+  }
+
+  .feedback__required {
+    width: 568px;
+
+    padding: 6px;
   }
 }

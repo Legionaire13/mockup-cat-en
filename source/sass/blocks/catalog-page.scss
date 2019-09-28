@@ -5,7 +5,8 @@
   .catalog-page .page-header {
 
     &::after {
-      background: none;
+      // background: none;
+      content: unset;
     }
 
   }

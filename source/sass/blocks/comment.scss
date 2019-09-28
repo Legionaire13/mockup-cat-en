@@ -111,3 +111,26 @@
     line-height: 30px;
   }
 }
+
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .comment {
+    margin-top: 30px;
+  }
+
+  .comment__headline {
+    margin-left: 70px;
+    padding-left: 39px;
+  }
+
+  .comment__textarea {
+    max-width: 1220px;
+  }
+
+}

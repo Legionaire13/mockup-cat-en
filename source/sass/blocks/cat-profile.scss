@@ -98,3 +98,20 @@
     border: 1px solid #cdcdcd;
   }
 }
+
+
+
+
+
+
+//      desktops
+@media screen and (min-width: $desktop-width) {
+  .cat-profile {
+    width: 570px;
+  }
+
+  .cat-profile__list {
+    margin-top: 0px;
+  }
+
+}
