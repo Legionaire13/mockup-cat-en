@@ -37,6 +37,8 @@
   padding-left: 20px;
   padding-right: 20px;
 
+  color: $form-text-headline;
+
   background-color: #ffffff;
 }
 
@@ -49,7 +51,6 @@
   list-style: none;
 
   min-width: 280px;
-  // max-width: 385px;
 
   display: flex;
   flex-direction: column;
@@ -64,6 +65,10 @@
   margin-bottom: 25px;
 
   position: relative;
+
+  &:hover label::before {
+    border-color: $form-border-hover;
+  }
 }
 
 .goods-to-add__label {
@@ -71,6 +76,8 @@
   align-items: center;
 
   margin-left: 45px;
+
+  color: $form-text-label;
 
   cursor: pointer;
 
@@ -85,11 +92,11 @@
     left: -1px;
     top: -6px;
 
-    border: 1px solid #cdcdcd;
+    border: 1px solid $form-border;
   }
 }
 
-.goods-to-add__input:checked+.goods-to-add__label::after {
+.goods-to-add__input:checked + .goods-to-add__label::after {
   content: "";
   display: block;
 
@@ -176,7 +183,18 @@
 @media screen and (min-width: $desktop-width) {
 
   .goods-to-add__headline {
-    margin-left: 70px;
+    margin: 0 auto;
+
+    max-width: 1385px;
+    width: 100%;
+
+    background-color: transparent;
+  }
+
+  .goods-to-add__headline span {
+    background-color: #fff;
+
+    padding: 0 40px;
   }
 
   .goods-to-add__list {

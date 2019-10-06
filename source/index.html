@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="icon" type="image/png" href="https://example.com/favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- потестить -->
   <!-- <link rel="preload" href="img/index-can-mobile.png"> -->
@@ -38,18 +38,18 @@
     </div>
 
     <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li class="main-nav-list__item main-nav-list__item--active">
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active">
           <a>
             Главная
           </a>
         </li>
-        <li class="main-nav-list__item">
+        <li class="main-nav__item">
           <a href="catalogue.html">
             Каталог продукции
           </a>
         </li>
-        <li class="main-nav-list__item">
+        <li class="main-nav__item">
           <a href="form.html">
             Подбор программы
           </a>
@@ -60,8 +60,7 @@
 
 
 
-  <!-- <main class="page-main"> -->
-  <main>
+  <main class="page-main">
     <article>
 
       <section class="intro">
@@ -200,12 +199,12 @@
             <div class="slider__cat-before"></div>
           </div>
           <p class="slider__controls">
-            <span class="slider__label">
+            <span class="slider__label" tabindex="0">
               Было
             </span>
             <input class="slider__range slider--tab-desktop" type="range" value="50">
             <button class="slider__button slider--mob"></button>
-            <span class="slider__label">
+            <span class="slider__label" tabindex="0">
               Стало
             </span>
           </p>
@@ -232,7 +231,8 @@
         <source media="(min-width: 768px)" srcset="img/map-pin-tab&dtp@2x.png 2x, img/map-pin-tab&dtp.png">
         <source srcset="img/map-pin-mobile@2x.webp 2x, img/map-pin-mobile.webp">
         <source srcset="img/map-pin-mobile@2x.jpg 2x, img/map-pin-mobile.jpg">
-        <img class="pin" width="55" height="53" src="img/map-pin-mobile.jpg" alt="Маркер здания на карте" loading="lazy">
+        <img class="pin" width="55" height="53" src="img/map-pin-mobile.jpg" alt="Маркер здания на карте"
+          loading="lazy">
       </picture>
 
       <!-- карта резиновая - потому размеры большие у изображений -->
@@ -243,7 +243,8 @@
         <source media="(min-width: 768px)" srcset="img/map-tablet@2x.webp 2x, img/map-tablet.webp">
         <source srcset="img/map-mobile@2x.webp 2x, img/map-mobile.webp">
         <source srcset="img/map-mobile@2x.jpg 2x, img/map-mobile.jpg">
-        <img class="map" width="1534" height="1917" src="img/map-mobile.jpg" alt="Карта проезда: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" loading="lazy">
+        <img class="map" width="1534" height="1917" src="img/map-mobile.jpg"
+          alt="Карта проезда: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" loading="lazy">
       </picture>
 
       <!-- real google maps iframe-->
@@ -255,8 +256,9 @@
     </div>
 
     <div class="page-footer__bottom-wrapper">
-      <div class="page-footer__logo-headline">
-        <img src="img/logo-mobile-name.svg" width="128" height="24" alt="Cat Energy - функциональное питание для котов" loading="lazy">
+      <div class="page-footer__logo-headline" tabindex="0">
+        <img src="img/logo-mobile-name.svg" width="128" height="24" alt="Cat Energy - функциональное питание для котов"
+          loading="lazy">
       </div>
 
       <hr class="divider divider--mobile-only">
@@ -265,23 +267,23 @@
         <ul class="social__list">
           <li class="social__item">
             <a href="#" class="social__link social__link--vk">
-              <span class="visually-hidden">
-                Мы в Вконтакте
-              </span>
+              <svg class="social__img" width="22" height="12" aria-label="Мы во Вконтакте">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link social__link--inst">
-              <span class="visually-hidden">
-                Мы в Инстаграме
-              </span>
+              <svg class="social__img" width="22" height="16" aria-label="Мы в Инстаграм">
+                <use xlink:href="img/sprite.svg#icon-inst"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link social__link--fb">
-              <span class="visually-hidden">
-                Мы в Фейсбуке
-              </span>
+              <svg class="social__img" width="22" height="16" aria-label="Мы в Фейсбук">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -290,10 +292,11 @@
       <hr class="divider divider--footer divider--mobile-only">
 
       <div class="page-footer__copyright copyright">
-        <a href="#" class="copyright__link">HTML Academy</a>
-        <svg class="copyright__logo" width="27" height="35">
-          <use xlink:href="img/sprite.svg#icon-htmla"></use>
-        </svg>
+        <a href="#" class="copyright__link">HTML Academy
+          <svg class="copyright__logo" width="27" height="35">
+            <use xlink:href="img/sprite.svg#icon-htmla"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </footer>

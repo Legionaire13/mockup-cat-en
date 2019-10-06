@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="icon" type="image/png" href="https://example.com/favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <title>"Cat Energy" Функциональное питание для котов</title>
 
@@ -16,7 +16,7 @@
 
   <header class="page-header page-header__nav-mobile--closed">
     <div class="page-header__wrapper">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -35,14 +35,14 @@
     </div>
 
     <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li class="main-nav-list__item">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
           <a href="index.html">Главная</a>
         </li>
-        <li class="main-nav-list__item">
+        <li class="main-nav__item">
           <a href="catalogue.html">Каталог продукции</a>
         </li>
-        <li class="main-nav-list__item main-nav-list__item--active">
+        <li class="main-nav__item main-nav__item--active">
           <a>Подбор программы</a>
         </li>
       </ul>
@@ -62,11 +62,11 @@
             <ul class="cat-profile__list">
               <li class="cat-profile__item">
                 <label class="cat-profile__label" for="name">Имя:*</label>
-                <input class="cat-profile__input" type="text" id="name" name="name" placeholder="Барсик">
+                <input class="cat-profile__input" type="text" id="name" name="name" placeholder="Барсик" pattern="\D+" required>
               </li>
               <li class="cat-profile__item">
                 <label class="cat-profile__label" for="weight">Вес (кг):*</label>
-                <input class="cat-profile__input" type="text" id="weight" name="weight" placeholder="7">
+                <input class="cat-profile__input" type="text" id="weight" name="weight" placeholder="7" pattern="\d+" required>
               </li>
               <li class="cat-profile__item">
                 <label class="cat-profile__label" for="age">Возраст (лет):</label>
@@ -79,7 +79,8 @@
             <legend class="visually-hidden">Выбор программы</legend>
             <ul class="program-choice__list">
               <li class="program-choice__item">
-                <input class="program-choice__input visually-hidden" type="radio" id="weight-loss" name="program-type" checked>
+                <input class="program-choice__input visually-hidden" type="radio" id="weight-loss" name="program-type"
+                  checked>
                 <label class="program-choice__label" for="weight-loss">Похудение</label>
               </li>
               <li class="program-choice__item">
@@ -95,34 +96,49 @@
         </div>
 
         <fieldset class="contacts">
-          <legend class="contacts__headline">Контактные данные (владельца кота)</legend>
+          <legend class="contacts__headline">
+            <span>Контактные данные (владельца кота)</span>
+          </legend>
           <ul class="contacts__list">
             <li class="contacts__item">
               <label class="contacts__label contacts__label--email" for="email">
                 <span>E-mail:*</span>
-                <input class="contacts__input" type="email" id="email" pattern=".+@mail.ru" placeholder="kuklachev@gmail.com" required>
+                <input class="contacts__input" type="email" id="email" pattern=".+@mail.ru"
+                  placeholder="kuklachev@gmail.com" required>
+                <svg class="contacts__icon" width="17" height="13">
+                  <use xlink:href="img/sprite.svg#icon-email"></use>
+                </svg>
               </label>
             </li>
             <li class="contacts__item">
               <label class="contacts__label contacts__label--phone" for="phone">
                 <span>Телефон:*</span>
-                <input class="contacts__input" type="tel" id="phone" name="phone" pattern="8 \([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-                placeholder="8 (960) 900-60-90" required>
+                <input class="contacts__input" type="tel" id="phone" name="phone"
+                  pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" required>
+                  <svg class="contacts__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
               </label>
             </li>
           </ul>
         </fieldset>
 
         <fieldset class="comment">
-          <legend class="comment__headline">Комментарий</legend>
-          <textarea class="comment__textarea" name="ctextarea" id="ctextarea" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <legend class="comment__headline">
+            <span>Комментарий</span>
+          </legend>
+          <textarea class="comment__textarea" name="ctextarea" id="ctextarea" cols="30" rows="10"
+            placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <fieldset class="goods-to-add">
-          <legend class="goods-to-add__headline">Дополнительно</legend>
+          <legend class="goods-to-add__headline">
+            <span>Дополнительно</span>
+          </legend>
           <ul class="goods-to-add__list">
             <li class="goods-to-add__item">
-              <input class="goods-to-add__input visually-hidden" id="sugar-sub" name="sugar-sub" type="checkbox" checked>
+              <input class="goods-to-add__input visually-hidden" id="sugar-sub" name="sugar-sub" type="checkbox"
+                checked>
               <label class="goods-to-add__label" for="sugar-sub">Сахарозаменитель</label>
             </li>
             <li class="goods-to-add__item">
@@ -139,7 +155,7 @@
             </li>
           </ul>
         </fieldset>
-        
+
         <div class="feedback__wrapper--required">
           <input class="button button--feedback" type="submit" value="Отправить заявку">
           <p class="feedback__required">* — Обязательные поля</p>
@@ -190,7 +206,7 @@
     </div>
 
     <div class="page-footer__bottom-wrapper">
-      <div class="page-footer__logo-headline">
+      <div class="page-footer__logo-headline" tabindex="0">
         <img src="img/logo-mobile-name.svg" width="128" height="24" alt="Cat Energy - функциональное питание для котов"
           loading="lazy">
       </div>
@@ -201,23 +217,23 @@
         <ul class="social__list">
           <li class="social__item">
             <a href="#" class="social__link social__link--vk">
-              <span class="visually-hidden">
-                Мы в Вконтакте
-              </span>
+              <svg class="social__img" width="22" height="12" aria-label="Мы во Вконтакте">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link social__link--inst">
-              <span class="visually-hidden">
-                Мы в Инстаграме
-              </span>
+              <svg class="social__img" width="22" height="16" aria-label="Мы в Инстаграм">
+                <use xlink:href="img/sprite.svg#icon-inst"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link social__link--fb">
-              <span class="visually-hidden">
-                Мы в Фейсбуке
-              </span>
+              <svg class="social__img" width="22" height="16" aria-label="Мы в Фейсбук">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -226,10 +242,11 @@
       <hr class="divider divider--mobile-only">
 
       <div class="page-footer__copyright copyright">
-        <a href="#" class="copyright__link">HTML Academy</a>
-        <svg class="copyright__logo" width="27" height="35">
-          <use xlink:href="img/sprite.svg#icon-htmla"></use>
-        </svg>
+        <a href="#" class="copyright__link">HTML Academy
+          <svg class="copyright__logo" width="27" height="35">
+            <use xlink:href="img/sprite.svg#icon-htmla"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </footer>

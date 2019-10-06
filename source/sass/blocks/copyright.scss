@@ -1,7 +1,5 @@
 .copyright {
   display: flex;
-
-  align-items: center;
 }
 
 .copyright__link {
@@ -11,13 +9,33 @@
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover .copyright__logo {
+    fill: $copyright-hover;
+  }
+
+  &:focus {
+    opacity: 0.3;
+
+    & .copyright__logo {
+      fill: $copyright-focus;
+    }
+  }
 }
 
 .copyright__logo {
   width: 27px;
   height: 35px;
 
-  fill: #666666;
+  fill: $copyright;
+
+  transition: fill 0.3s;
 }
 
 
@@ -26,10 +44,10 @@
 @media screen and (min-width: $tablet-width) {
 
   .copyright__link {
-    margin-left: -13px; // pp
+    transform: translateX(-13px); // pp
   }
 
   .copyright__logo {
-    margin-right: 10px; // pp
+    transform: translateX(3px); // pp
   }
 }

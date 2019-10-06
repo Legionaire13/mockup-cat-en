@@ -14,6 +14,7 @@
   position: relative;
 
   padding: 20px;
+  padding-bottom: 8px;
   margin: 20px;
   margin-bottom: 0;
 
@@ -84,7 +85,10 @@
 
   position: relative;
 
-  margin-top: 20px;
+  width: 125px;
+
+  padding: 12px 0;
+  margin-top: 8px;
 
   cursor: pointer;
 
@@ -96,11 +100,32 @@
 
     position: absolute;
     left: 96px;
-    top: 3px;
-
+    top: 14px;
+    transition: all 0.3s;
 
     background: url(../img/icon-arrow.svg) no-repeat 50% 50%;
   }
+
+  &:hover {
+    outline: transparent;
+
+    &::after {
+      width: 33px;
+      transform: scaleX(1.375) translateX(1px);
+    }
+  }
+
+  &:focus {
+    color: #b7b7b7;
+    outline: transparent;
+
+    &::after {
+      width: 33px;
+      transform: scaleX(1.375) translateX(1px);
+      opacity: 0.3;
+    }
+  }
+
 }
 
 .program__text {
@@ -189,11 +214,13 @@
     font-size: 20px;
     line-height: 20px;
 
-    margin-top: 34px;
+    margin-top: 23px;
+
+    width: 180px;
 
     &::after {
       left: 131px;
-      top: 5px;
+      top: 16px;
     }
   }
 
@@ -282,12 +309,7 @@
   }
 
   .program__link {
-    margin-top: 31px; // pp
-
-    &::after {
-      left: 131px;
-      top: 5px;
-    }
+    margin-top: 20px; // pp
   }
 
 }

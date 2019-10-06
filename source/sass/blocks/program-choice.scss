@@ -9,8 +9,8 @@
   min-height: 130px;
 
   border: none;
-  border-top: 1px solid #cdcdcd;
-  border-bottom: 1px solid #cdcdcd;
+  border-top: 1px solid $form-border;
+  border-bottom: 1px solid $form-border;
 }
 
 .program-choice__list {
@@ -44,6 +44,8 @@
 
   margin-left: 45px;
 
+  color: $form-text-label;
+
   cursor: pointer;
 
   &::before {
@@ -57,8 +59,12 @@
     left: -1px;
     top: -6px;
 
-    border: 1px solid #cdcdcd;
+    border: 1px solid $form-border;
     border-radius: 50%;
+  }
+
+  &:hover::before {
+    border-color: $form-border-hover;
   }
 }
 
@@ -91,7 +97,7 @@
     margin-top: 65px;
 
     box-sizing: border-box;
-    border: 1px solid #cdcdcd;
+    border: 1px solid $form-border;
   }
 
   .program-choice__list {

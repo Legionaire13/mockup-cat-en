@@ -1,15 +1,14 @@
+// general
 $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-
 // font-families
 $font-family: "Oswald Regular", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
 $font-family-medium: "Oswald Medium", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
 $font-family-common: "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
-
 
 // colors set
 $bg-primary: #ffffff;
@@ -19,16 +18,100 @@ $bg-others: #68b738;
 $font: #444444;
 $font-light: #ffffff;
 $font-dark: #111111;
+$font-dark-lighter: #222222;
 
-$nav: #222222;
 
-$bg-slider-grad: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
-$bg-slider-img-grad: linear-gradient(to bottom, #ffffff 27%, #f2f2f2 27%);
-$bg-slider-img-grad2: linear-gradient(to bottom, #ffffff 27%, #eaeaea 27%);
-$slider-bar: #dcdcdc;
-$slider-thumb-color: #ffffff;
-$slider-thumb-border: #cdcdcd;
 
+// button
+$button-bg: #68b738;
+$button-bg-hover: #5eaa2f;
+$button-bg-focus: #5eaa2f;
+$button-text: #ffffff;
+$button-text-focus: #8fc46e;
+
+$button-more-bg: #f2f2f2;
+$button-more-bg-hover: #ebebeb;
+$button-more-bg-focus: #ebebeb;
+$button-more-text: #444444;
+$button-more-text-focus: #b9b9b9;
+
+
+
+// copyright
+$copyright: #666666;
+$copyright-hover: #68b738;
+$copyright-focus: #68b738;
+
+
+
+// data
+$data-param-background: #cdcdcd;
+
+
+
+// table
 $table-bg:#f2f2f2;
+$table-bg-tablets: #ffffff;
+$table-nums-border: #cdcdcd;
 
-$data__heading: "Oswald Regular", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+
+
+// slider
+$slider-background-gradient: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+$slider-before-background: linear-gradient(to bottom, #ffffff 27%, #f2f2f2 27%);
+$slider-after-background: linear-gradient(to bottom, #ffffff 27%, #eaeaea 27%);
+
+$slider-bar: #dcdcdc;
+
+$slider-button-border: #cdcdcd;
+
+$slider-thumb-border: #cdcdcd;
+$slider-thumb-color: #ffffff;
+
+$slider-label: rgba(17, 17, 17, 0.27);
+$slider-label-hover: rgba(17, 17, 17, 0.4);
+
+
+
+// gift
+$gift-img: #ffffff;
+$gift-text: #ffffff;
+
+
+
+// goods
+$goods-border: #cdcdcd;
+$goods-caption-text: #222222;
+
+
+
+// intro
+$intro-button: #68b738;
+$intro-button-hover: #5eaa2f;
+$intro-button-focus: #5eaa2f;
+$intro-button-text-focus: #8fc46e;
+
+
+
+// main-nav
+$nav-border-mob: #e6e6e6;
+$nav-border-with-bg: #ffffff;
+$nav-border-active: #68b738;
+
+$nav-text-with-bg: #ffffff;
+$nav-text-hover: #707070;
+$nav-text-focus: #b7b7b7;
+
+
+
+
+// form
+$form-border: #e6e6e6;
+$form-border-hover: #cdcdcd;
+$form-border-focus: #444444;
+$form-icon: #222222;
+$form-icon-valid: #68b738;
+$form-invalid: #ff8282;
+$form-text-headline: #111111;
+$form-text-label: #222222;
+$form-text-placeholder: #444444;

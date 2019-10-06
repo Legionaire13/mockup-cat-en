@@ -1,0 +1,16 @@
+//      desktops
+@media screen and (min-width: $desktop-width) {
+
+  .index-page .main-nav__item {
+
+    & a:hover {
+      color: #c1ddb1;
+    }
+
+    & a:focus {
+      color: #94c377;
+      outline: none;
+    }
+
+  }
+}

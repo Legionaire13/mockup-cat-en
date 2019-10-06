@@ -45,7 +45,7 @@
   min-width: 122px;
   min-height: 55px;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid $table-nums-border;
   border-radius: 3px;
 
   box-sizing: border-box;
@@ -86,7 +86,7 @@
 @media screen and (min-width: $tablet-width) {
 
   .table {
-    background-color: #ffffff;
+    background-color: $table-bg-tablets;
 
     display: flex;
     justify-content: space-between;
@@ -117,7 +117,7 @@
     font-size: 14px;
     line-height: 14px;
 
-    background-color: #ffffff;
+    background-color: $table-bg-tablets;
 
     padding-left: 5px;
     padding-right: 5px;

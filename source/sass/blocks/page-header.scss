@@ -10,6 +10,14 @@
   height: 38px;
   margin-left: 20px;
   margin-bottom: 4px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .page-header__logo-mobile {
@@ -68,6 +76,10 @@
   }
 
 }
+
+
+
+
 
 
 

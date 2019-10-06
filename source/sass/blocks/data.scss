@@ -7,7 +7,7 @@
 }
 
 .data__heading {
-  font-family: $data__heading;
+  font-family: $font-family;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -94,7 +94,7 @@
       position: absolute;
       bottom: -3px; // pp
 
-      background-color: #cdcdcd;
+      background-color: $data-param-background;
     }
   }
 

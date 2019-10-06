@@ -39,12 +39,18 @@
 
 .cat-profile__label {
   text-transform: uppercase;
+  color: $form-text-label;
 }
 
 .cat-profile__input {
+  appearance: none;  // iOS
+  border-radius: 0;  // iOS
+  outline: none;  // iOS
+
   flex-grow: 1;
 
   min-height: 30px;
+  height: 100%;
 
   padding: 6px;
   padding-left: 14px; // pp
@@ -52,14 +58,34 @@
 
   text-transform: uppercase;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid $form-border;
+
+  &:hover {
+    border-color: $form-border-hover;
+  }
 
   &:focus {
-    color: #444444;
+    border: 2px solid $form-border-focus;
+    outline: none;
+
+    margin-top: -1px;
+    margin-bottom: -1px;
+
+    transform: translateX(-1px);
+  }
+
+  // without placeholder data for "required" fields only
+  &:not(:focus):required:invalid:not(:placeholder-shown) {
+    border: 2px solid $form-invalid;
+
+    margin-top: -1px;
+    margin-bottom: -1px;
+
+    color: $form-invalid;
   }
 
   @include placeholder {
-    color: #444444;
+    color: $form-text-placeholder;
   }
 }
 
@@ -94,8 +120,6 @@
     padding: 10px;
     padding-left: 18px; // pp
     margin-left: 20px; // pp
-
-    border: 1px solid #cdcdcd;
   }
 }
 

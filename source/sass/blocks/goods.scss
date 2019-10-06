@@ -20,6 +20,8 @@
 }
 
 .goods__table {
+  width: 100%; // для iOS
+
   text-align: left;
   padding: 0;
 
@@ -46,20 +48,22 @@
 
   padding-bottom: 18px; // pp
 
-  border-bottom: 1px solid #cdcdcd;
+  border-bottom: 1px solid $goods-border;
 
   &:first-child {
-    border-top: 1px solid #cdcdcd;
+    border-top: 1px solid $goods-border;
   }
 }
 
 .goods__caption {
-  font-family: $data__heading;
+  font-family: $font-family;
   font-size: 16px;
   line-height: 20px;
 
   margin-top: 11px; // pp
   margin-bottom: 11px; // pp
+
+  color: $goods-caption-text;
 
   text-align: left;
   text-transform: uppercase;
@@ -79,7 +83,7 @@
   padding-top: 8px;
   padding-bottom: 34px;
 
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .goods__price {
@@ -129,7 +133,7 @@
 
     padding-bottom: 18px; // pp
 
-    border: 1px solid #cdcdcd;
+    border: 1px solid $goods-border;
   }
 
   .goods__table {
@@ -180,7 +184,7 @@
 
   .goods {
     margin-top: 60px;
-    margin-bottom: 75px; // подобрать
+    margin-bottom: 75px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -196,7 +200,7 @@
   }
 
   .goods__list {
-    width: 895px; // pp (по макету)
+    width: 895px;
 
     max-width: 100%;
 
@@ -212,12 +216,12 @@
     align-items: center;
 
     border: none;
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid $goods-border;
 
     height: 71px;
 
     margin: 0;
-    padding: 0; // подобрать ?
+    padding: 0;
   }
 
   .goods__wrapper {
@@ -234,12 +238,14 @@
     padding-left: 110px;
 
     max-width: 1240px;
+  }
 
-    // background-color: navy; // to del
+  .goods__table {
+    width: 650px;
   }
 
   .goods__caption {
-    min-width: 325px;
+    min-width: 320px;
 
     margin-left: 0;
   }

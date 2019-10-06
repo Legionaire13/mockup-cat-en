@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.main-nav-list {
+.main-nav__list {
   margin: 0;
   padding: 0;
 
@@ -12,11 +12,11 @@
   width: 100%;
 }
 
-.main-nav-list__item {
+.main-nav__item {
   list-style-type: none;
 }
 
-.main-nav-list__item a {
+.main-nav__item a {
   font-family: $font-family-medium;
   font-size: 20px;
   line-height: 20px;
@@ -36,6 +36,18 @@
 
   text-align: center;
   padding-top: 23px;
+
+  transition: color 0.3s;
+
+  &:hover {
+    color: $nav-text-hover;
+  }
+
+  &:focus {
+    color: $nav-text-focus;
+    outline: none;
+  }
+
 }
 
 
@@ -43,8 +55,8 @@
 //      mobile width only
 @media screen and (max-width: 767px) {
 
-  .main-nav-list__item {
-    border-bottom: 1px solid #e6e6e6;
+  .main-nav__item {
+    border-bottom: 1px solid $nav-border-mob;
   }
 
 }
@@ -58,12 +70,12 @@
     width: 440px;
   }
 
-  .main-nav-list {
+  .main-nav__list {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .main-nav-list__item a {
+  .main-nav__item a {
     font-family: $font-family;
     font-weight: 400;
     font-size: 18px;
@@ -74,13 +86,17 @@
   }
 
 
-  .main-nav-list__item {
+  .main-nav__item {
     &--active a {
-      border-bottom: 2px solid $bg-others;
+      border-bottom: 2px solid $nav-border-active;
     }
   }
 
 }
+
+
+
+
 
 
 //      desktop
@@ -90,16 +106,16 @@
     width: 480px;
   }
 
-  .main-nav-list__item a {
+  .main-nav__item a {
     font-size: 20px;
     line-height: 24px;
 
-    color: #fff;
+    color: $nav-text-with-bg;
   }
 
-  .main-nav-list__item {
+  .main-nav__item {
     &--active a {
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid $nav-border-with-bg;
     }
   }
 

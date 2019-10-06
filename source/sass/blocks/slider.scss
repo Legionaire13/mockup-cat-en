@@ -66,10 +66,14 @@
 
 .slider__button {
   background-color: $bg-primary;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $slider-button-border;
 
   width: 84px;
   height: 14px;
+
+  padding: 0; // safari issue
+  padding-left: 4px;
+  padding-right: 4px;
 
   margin-left: 20px;
   margin-right: 20px;
@@ -85,10 +89,19 @@
     width: 35px;
     height: 6px;
 
+    // margin: 0 auto;
+
     border-radius: 3px;
     background-color: $bg-others;
 
-    transform: translateX(-2px);
+    // mobile toggler positions
+    &::before {
+      transform: translateX(0%);
+    }
+
+    &::after {
+      transform: translateX(100%);
+    }
   }
 }
 
@@ -126,7 +139,7 @@
     margin-top: 35px;
     padding-bottom: 0;
 
-    background: $bg-slider-grad;
+    background: $slider-background-gradient;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0 170px;
@@ -156,7 +169,7 @@
     position: absolute;
     z-index: 2;
 
-    background: url(../img/cat-before.png) no-repeat, $bg-slider-img-grad;
+    background: url(../img/cat-before.png) no-repeat, $slider-before-background;
     background-position: -15% 0%; // pp
     background-size: initial;
   }
@@ -165,11 +178,10 @@
     width: 768px;
     height: 631px;
 
-    // margin: 0 auto;
     position: absolute;
     z-index: 1;
 
-    background: url(../img/cat-after.png) no-repeat, $bg-slider-img-grad2;
+    background: url(../img/cat-after.png) no-repeat, $slider-after-background;
     background-position: 58% 0%; // pp
     background-size: initial;
   }
@@ -201,10 +213,10 @@
     margin-right: 24px; // pp
 
     padding-bottom: 6px;
-    border-bottom: 1px dotted rgba(17, 17, 17, 0.27);
+    border-bottom: 1px dotted $slider-label;
 
     &:hover {
-      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+      border-bottom: 1px solid $slider-label-hover;
     }
 
     &:focus {
@@ -280,6 +292,7 @@
     border: 13px solid $slider-thumb-color;
     border-radius: 50%;
     background: $bg-others;
+
     box-shadow: 0 0 0 1px $slider-thumb-border,
       0 2px 5px rgba(0, 0, 0, 0.15);
 
@@ -329,7 +342,9 @@
 
     border: 13px solid $slider-thumb-color;
     border-radius: 50%;
+
     background: $bg-others;
+
     box-shadow: 0 0 0 1px $slider-thumb-border,
       0 2px 5px rgba(0, 0, 0, 0.15);
 
@@ -353,13 +368,13 @@
 @media screen and (min-width: $tablet-width) and (min-resolution: 1.5dppx) {
 
   .slider__cat-before {
-    background: url(../img/cat-before@2x.png) no-repeat, $bg-slider-img-grad;
+    background: url(../img/cat-before@2x.png) no-repeat, $slider-before-background;
     background-position: -13% 7%; // pp
     background-size: 690px 517px, contain;
   }
 
   .slider__cat-after {
-    background: url(../img/cat-after@2x.png) no-repeat, $bg-slider-img-grad2;
+    background: url(../img/cat-after@2x.png) no-repeat, $slider-after-background;
     background-position: 85% 0%; // pp
     background-size: 690px 517px, contain;
   }
@@ -384,7 +399,7 @@
 
     margin-top: -10px;
 
-    background: $bg-slider-grad;
+    background: $slider-background-gradient;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0 170px;
@@ -409,7 +424,6 @@
   .slider__controls {
     bottom: 9.8%;
   }
-
 
 }
 
