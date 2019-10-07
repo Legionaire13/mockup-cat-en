@@ -17,10 +17,10 @@
 
     height: 3px;
 
+    transform: translateY(-35px);
     position: absolute;
     left: 0;
     right: 0;
-    top: 13px; // pp
 
     z-index: -1;
 
@@ -52,7 +52,6 @@
   list-style: none;
 
   min-width: 280px;
-  // max-width: 385px;
 
   display: flex;
   flex-direction: column;
@@ -139,7 +138,7 @@
 
   flex-grow: 1;
 
-  min-height: 30px;
+  height: 30px;
 
   padding: 6px;
   padding-left: 14px; // pp
@@ -169,7 +168,7 @@
 
     // зеленая полоска
     &::before {
-      top: 22px; // pp
+      transform: translateY(-14px);
     }
   }
 
@@ -253,6 +252,11 @@
 
   .contacts {
     margin-top: 55px;
+
+    // зеленая полоска
+    &::before {
+      transform: translateY(-13px);
+    }
   }
 
   .contacts__headline {

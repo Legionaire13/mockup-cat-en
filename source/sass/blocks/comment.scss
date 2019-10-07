@@ -20,7 +20,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 15px; // pp
+    transform: translateY(-10px);
 
     z-index: -1;
 
@@ -32,10 +32,13 @@
   font-size: 24px;
   line-height: 24px;
 
+  max-width: 162px;
+
   padding-left: 20px;
   padding-right: 20px;
 
   color: $form-text-headline;
+
   background-color: #ffffff;
 }
 
@@ -96,9 +99,7 @@
 
     // зеленая полоска
     &::before {
-      left: 0;
-      right: 0;
-      top: 21px; // pp
+      transform: translateY(-15px);
     }
   }
 
@@ -118,7 +119,7 @@
     max-width: 630px;
     height: 175px;
 
-    margin: 0 auto; // проверить как работает флекс
+    margin: 0 auto;
     margin-top: 75px; // pp
     padding: 20px; // pp
     padding-top: 10px; // pp
