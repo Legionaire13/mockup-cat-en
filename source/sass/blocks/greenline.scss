@@ -1,0 +1,37 @@
+.greenline {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+
+    height: 3px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    z-index: -1;
+
+    background-color: $bg-others;
+  }
+
+  & legend {
+    background-color: #ffffff;
+  }
+}
+
+
+
+
+@media screen and (min-width: $desktop-width) {
+  .greenline {
+    & legend {
+      background-color: transparent;
+    }
+
+    & span  {
+      background-color: #ffffff;
+    }
+  }
+}

@@ -8,23 +8,9 @@
 
   border: none;
 
-  position: relative;
-
-  // зеленая полоска
+  // greenline position
   &::before {
-    content: '';
-    display: block;
-
-    height: 3px;
-
     transform: translateY(-35px);
-    position: absolute;
-    left: 0;
-    right: 0;
-
-    z-index: -1;
-
-    background-color: $bg-others;
   }
 }
 
@@ -38,8 +24,6 @@
   padding-right: 20px;
 
   color: $form-text-headline;
-
-  background-color: #ffffff;
 }
 
 .contacts__list {
@@ -166,7 +150,7 @@
     margin-top: 74px;
     align-items: center;
 
-    // зеленая полоска
+    // greenline position
     &::before {
       transform: translateY(-14px);
     }
@@ -181,8 +165,6 @@
     padding-left: 40px;
     padding-right: 40px;
     margin-left: 30px;
-
-    background-color: #ffffff;
   }
 
   .contacts__list {
@@ -206,14 +188,6 @@
       top: 5px;
       right: 5px;
     }
-
-    // &--email::after {
-    //   background-size: 17px 13px;
-    // }
-
-    // &--phone::after {
-    //   background-size: 20px 20px;
-    // }
   }
 
 
@@ -253,7 +227,7 @@
   .contacts {
     margin-top: 55px;
 
-    // зеленая полоска
+    // greenline position
     &::before {
       transform: translateY(-13px);
     }
@@ -264,13 +238,9 @@
 
     max-width: 1385px;
     width: 100%;
-
-    background-color: transparent;
   }
 
   .contacts__headline span {
-    background-color: #fff;
-
     padding: 0 40px;
   }
 

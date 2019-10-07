@@ -10,23 +10,9 @@
 
   border: none;
 
-  position: relative;
-
-  // зеленая полоска
+  // greenline position
   &::before {
-    content: '';
-    display: block;
-
-    height: 3px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
     transform: translateY(-10px);
-
-    z-index: -1;
-
-    background-color: $bg-others;
   }
 }
 
@@ -40,25 +26,23 @@
   max-width: 184px;
 
   color: $form-text-headline;
-
-  background-color: #ffffff;
 }
 
 .goods-to-add__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
   padding: 0;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 40px;
   margin-bottom: 18px;
 
-  list-style: none;
-
   min-width: 280px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  list-style: none;
 }
 
 .goods-to-add__item {
@@ -187,13 +171,9 @@
 
     max-width: 1385px;
     width: 100%;
-
-    background-color: transparent;
   }
 
   .goods-to-add__headline span {
-    background-color: #fff;
-
     padding: 0 40px;
   }
 

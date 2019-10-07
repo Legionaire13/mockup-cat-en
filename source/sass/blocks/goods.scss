@@ -1,21 +1,8 @@
 .goods {
   width: 100%;
-  position: relative;
 
-  &::after {
-    content: '';
-    display: block;
-
-    height: 3px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 21px; // pp
-
-    z-index: -1;
-
-    background-color: $bg-others;
+  &::before {
+    transform: translateY(21px);
   }
 }
 
@@ -100,8 +87,8 @@
 @media screen and (min-width: $tablet-width) {
 
   .goods {
-    &::after {
-      top: 32px; // pp
+    &::before {
+      transform: translateY(32px);
     }
   }
 

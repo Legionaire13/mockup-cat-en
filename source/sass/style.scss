@@ -47,6 +47,21 @@ h6 {
   font-style: normal;
 }
 
+// no tap highlight in Safari
+a, label {
+	-webkit-tap-highlight-color: transparent;
+}
+
+//  (use carefully)
+input, textarea {
+	-webkit-tap-highlight-color: transparent;
+}
+
+// safari input baseline
+input {
+  line-height: normal;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {

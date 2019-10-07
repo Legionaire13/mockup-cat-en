@@ -8,23 +8,9 @@
 
   border: none;
 
-  position: relative;
-
-  // зеленая полоска
+  // greenline position
   &::before {
-    content: '';
-    display: block;
-
-    height: 3px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
     transform: translateY(-10px);
-
-    z-index: -1;
-
-    background-color: $bg-others;
   }
 }
 
@@ -38,8 +24,6 @@
   padding-right: 20px;
 
   color: $form-text-headline;
-
-  background-color: #ffffff;
 }
 
 .comment__textarea {
@@ -97,7 +81,7 @@
   .comment {
     margin-top: 50px;
 
-    // зеленая полоска
+    // greenline position
     &::before {
       transform: translateY(-15px);
     }
@@ -151,7 +135,6 @@
   }
 
   .comment__headline span {
-    background-color: #fff;
     padding: 0 40px;
   }
 
