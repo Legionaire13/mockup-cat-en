@@ -148,8 +148,6 @@
     padding-bottom: 20px;
 
     margin: 0 auto;
-    // margin-left: 110px;
-    // margin-right: 100px;
 
     &::after {
       content: "";
@@ -159,7 +157,7 @@
       height: 696px;
 
       background-color: #65a93c; // color fallback
-      background-image: url(../img/index-bg.jpg);
+      background-image: url(../img/index-bg-desktop.jpg);
       background-repeat: no-repeat;
       background-position: 100% 0;
 
@@ -174,6 +172,18 @@
   .page-header__logo {
     width: 202px;
     height: 59px;
+  }
+
+}
+
+@media screen and (min-width: $desktop-width) and (min-resolution: 1.5dppx) {
+
+  .page-header {
+    &::after {
+      background-image: url(../img/index-bg-desktop@2x.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
 }

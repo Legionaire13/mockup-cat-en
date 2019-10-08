@@ -227,23 +227,26 @@
 
     <div class="page-footer__map">
       <picture>
-        <source media="(min-width: 768px)" srcset="img/map-pin-tab&dtp@2x.webp 2x, img/map-pin-tab&dtp.webp">
-        <source media="(min-width: 768px)" srcset="img/map-pin-tab&dtp@2x.png 2x, img/map-pin-tab&dtp.png">
-        <source srcset="img/map-pin-mobile@2x.webp 2x, img/map-pin-mobile.webp">
-        <source srcset="img/map-pin-mobile@2x.jpg 2x, img/map-pin-mobile.jpg">
-        <img class="pin" width="55" height="53" src="img/map-pin-mobile.jpg" alt="Маркер здания на карте"
+        <source media="(min-width: 768px)"  type="image/webp"
+        srcset="img/map-pin-tab&dtp@2x.webp 2x, img/map-pin-tab&dtp.webp">
+        <source media="(min-width: 768px)"
+        srcset="img/map-pin-tab&dtp@2x.png 2x, img/map-pin-tab&dtp.png">
+        <source type="image/webp"
+        srcset="img/map-pin-mobile@2x.webp 2x, img/map-pin-mobile.webp">
+        <source srcset="img/map-pin-mobile@2x.png 2x, img/map-pin-mobile.png">
+        <img class="pin" width="55" height="53" src="img/map-pin-mobile.png" alt="Маркер здания на карте"
           loading="lazy">
       </picture>
 
-      <!-- карта резиновая - потому размеры большие у изображений -->
+      <!-- карта резиновая - потому размеры большие у изображений, type указывать обязательно без него Сафари не определяет другое изображение -->
       <picture>
+        <source media="(min-width: 1440px)" type="image/webp" srcset="img/map-desktop@2x.webp 2x, img/map-desktop.webp">
         <source media="(min-width: 1440px)" srcset="img/map-desktop@2x.jpg 2x, img/map-desktop.jpg">
-        <source media="(min-width: 1440px)" srcset="img/map-desktop@2x.webp 2x, img/map-desktop.webp">
+        <source media="(min-width: 768px)" type="image/webp" srcset="img/map-tablet@2x.webp 2x, img/map-tablet.webp">
         <source media="(min-width: 768px)" srcset="img/map-tablet@2x.jpg 2x, img/map-tablet.jpg">
-        <source media="(min-width: 768px)" srcset="img/map-tablet@2x.webp 2x, img/map-tablet.webp">
-        <source srcset="img/map-mobile@2x.webp 2x, img/map-mobile.webp">
+        <source type="image/webp" srcset="img/map-mobile@2x.webp 2x, img/map-mobile.webp">
         <source srcset="img/map-mobile@2x.jpg 2x, img/map-mobile.jpg">
-        <img class="map" width="1534" height="1917" src="img/map-mobile.jpg"
+        <img class="map" width="425" width="531" src="img/map-mobile.jpg"
           alt="Карта проезда: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" loading="lazy">
       </picture>
 
@@ -256,10 +259,10 @@
     </div>
 
     <div class="page-footer__bottom-wrapper">
-      <div class="page-footer__logo-headline" tabindex="0">
+      <a class="page-footer__logo-headline" tabindex="0">
         <img src="img/logo-mobile-name.svg" width="128" height="24" alt="Cat Energy - функциональное питание для котов"
           loading="lazy">
-      </div>
+      </a>
 
       <hr class="divider divider--mobile-only">
 
