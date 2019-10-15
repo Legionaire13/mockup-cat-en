@@ -71,7 +71,7 @@
   width: 84px;
   height: 14px;
 
-  padding: 0; // safari issue
+  padding: 0; // safari
   padding-left: 4px;
   padding-right: 4px;
 
@@ -88,8 +88,6 @@
 
     width: 35px;
     height: 6px;
-
-    // margin: 0 auto;
 
     border-radius: 3px;
     background-color: $bg-others;

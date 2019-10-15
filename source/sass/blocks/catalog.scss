@@ -33,7 +33,7 @@
     margin: 0 auto;
 
     min-width: 700px;
-    max-width: 1092px; // резиновый вариант на три ряда
+    max-width: 1092px;
 
     border-bottom: none;
   }
@@ -44,7 +44,7 @@
     justify-content: flex-start;
 
     min-width: 700px;
-    max-width: 1152px; // резиновый вариант на три ряда
+    max-width: 1152px;
     margin: 0 auto;
   }
 
@@ -54,10 +54,10 @@
 
 }
 
-//tablets only (корректное поведение контейнера с товарами)
+//tablets only (goods container)
 @media screen and (min-width: $tablet-width) and (max-width: 1151px) {
   .catalog__list {
-    max-width: 768px; //
+    max-width: 768px;
   }
 }
 
@@ -72,20 +72,20 @@
     padding-top: 51px;
     padding-left: 110px;
 
-    max-width: 1300px; // резиновый вариант на три ряда
+    max-width: 1300px;
   }
 
   .catalog__list {
     padding-left: 110px;
-    padding-right: 30px; // чтоб карточки помещались с padding
+    padding-right: 30px;
 
-    max-width: 1300px; // резиновый вариант на три ряда
+    max-width: 1300px;
 
     justify-content: flex-start;
   }
 
   .catalog__product-cards {
-    margin-bottom: 53px; // изменить
+    margin-bottom: 53px;
   }
 
 
