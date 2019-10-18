@@ -53,7 +53,9 @@ gulp.task("styling", (done) => {
 gulp.task("copy", (done) => {
   gulp.src([
       "./source/fonts/**/*.{woff,woff2}",
-      "./source/img/**"
+      "./source/img/**",
+      "./source/robots.txt",
+      "./source/favicon.png"
       // "./source/js/**",
       // ".source/*.html"
     ], {
