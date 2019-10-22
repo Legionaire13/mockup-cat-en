@@ -1,4 +1,4 @@
-(function mobNavHandler() {
+(function mobileNavigationHandler() {
   const navMain = document.querySelector('.page-header');
   const navToggle = document.querySelector('.page-header__nav-mobile');
 
