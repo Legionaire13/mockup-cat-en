@@ -158,6 +158,8 @@
     }
 
     &:focus {
+      outline: none;
+
       background-color: $intro-button-focus;
       color: $intro-button-text-focus;
     }

@@ -83,14 +83,13 @@
   }
 }
 
-.goods-to-add__input:checked + .goods-to-add__label::after {
+.goods-to-add__input:checked+.goods-to-add__label::after {
   content: "";
   display: block;
 
   width: 21px;
   height: 16px;
 
-  // background: url(../../img/tick.svg) no-repeat 50% 50%;
   background: url(../img/tick.svg) no-repeat 50% 50%;
 
   position: absolute;
@@ -154,8 +153,23 @@
     }
   }
 
-  .goods-to-add__input:checked + .goods-to-add__label::after {
-    left: -2px;
+  .goods-to-add__input {
+
+    &:checked + .goods-to-add__label::after {
+      left: -2px;
+    }
+
+    &:focus + .goods-to-add__label {
+      color: #b9b9b9;
+
+      &::after {
+        opacity: .3;
+      }
+
+      &::before {
+        border-color: #ebebeb;
+      }
+    }
   }
 
 }

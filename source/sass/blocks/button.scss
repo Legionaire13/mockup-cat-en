@@ -25,6 +25,8 @@
   }
 
   &:focus {
+    outline: none;
+
     background-color: $button-bg-focus;
     color: $button-text-focus;
   }

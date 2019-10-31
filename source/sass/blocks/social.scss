@@ -74,6 +74,10 @@
   }
 
   .social__link {
+    &:focus {
+      outline: none;
+    }
+
     &--vk svg {
       width: 30px;
       height: 16px;

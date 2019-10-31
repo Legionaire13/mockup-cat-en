@@ -250,6 +250,10 @@
       border-bottom: 1px dotted $slider-label;
     }
 
+    &:focus {
+      outline: none;
+    }
+
     &:hover {
       cursor: pointer;
 
@@ -259,6 +263,7 @@
     }
 
     &:focus::after {
+
       border-bottom: none;
     }
   }

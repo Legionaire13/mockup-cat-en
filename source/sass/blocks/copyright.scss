@@ -45,6 +45,10 @@
 
   .copyright__link {
     transform: translateX(-13px); // pp
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .copyright__logo {
