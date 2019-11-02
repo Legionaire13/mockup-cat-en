@@ -1,30 +1,30 @@
 "use strict";
 // modules
-const gulp = require("gulp");
-const autoprefixer = require("gulp-autoprefixer");
-const browserSync = require("browser-sync").create();
-const cleanCSS = require("gulp-clean-css");
-const concat = require("gulp-concat");
-const del = require("del");
-const imagemin = require("gulp-imagemin");
-const include = require("posthtml-include");
-const plumber = require("gulp-plumber");
-const posthtml = require("gulp-posthtml");
-const htmlmin = require("gulp-htmlmin");
-const rename = require("gulp-rename");
-const sass = require("gulp-sass");
-const sourcemaps = require("gulp-sourcemaps");
-const svgstore = require("gulp-svgstore");
-const watch = require("gulp-watch");
-const webp = require("gulp-webp");
-sass.compiler = require("node-sass");
+const gulp = require("gulp")
+const autoprefixer = require("gulp-autoprefixer")
+const browserSync = require("browser-sync").create()
+const cleanCSS = require("gulp-clean-css")
+const critical = require("critical").stream
+const concat = require("gulp-concat")
+const del = require("del")
+const imagemin = require("gulp-imagemin")
+const include = require("posthtml-include")
+const plumber = require("gulp-plumber")
+const posthtml = require("gulp-posthtml")
+const htmlmin = require("gulp-htmlmin")
+const rename = require("gulp-rename")
+const sass = require("gulp-sass")
+const sourcemaps = require("gulp-sourcemaps")
+const svgstore = require("gulp-svgstore")
+const webp = require("gulp-webp")
+sass.compiler = require("node-sass")
 
-const terser = require('gulp-terser');
+const terser = require('gulp-terser')
 // const responsive = require('gulp-responsive');
 
 // tasks
 // подготовка css
-gulp.task("styling", (done) => {
+gulp.task("styling", async () => {
   gulp.src([
       "./source/normalize/normalize.css",
       "./source/sass/variables.scss",
@@ -46,11 +46,37 @@ gulp.task("styling", (done) => {
     .pipe(plumber.stop())
     .pipe(gulp.dest("./build/css"))
     .pipe(browserSync.stream());
-  done();
+});
+
+//critical css
+// gulp.task("critical", async () => {
+//   critical.generate({
+//       inline: true,
+//       base: './build',
+//       src: 'index.html',
+//       css: ['./build/css/style.min.css'],
+//       dest: './index.html',
+//       minify: true,
+//       width: 320,
+//       height: 480
+//   })
+// })
+// Generate & Inline Critical-path CSS
+gulp.task('critical', async () => {
+  return gulp
+    .src('./build/*.html')
+    .pipe(critical({
+      base: './build',
+      inline: true,
+    }))
+    .on('error', err => {
+      log.error(err.message);
+    })
+    .pipe(gulp.dest('./build'));
 });
 
 // Копирование
-gulp.task("copy", (done) => {
+gulp.task("copy", async () => {
   gulp.src([
       "./source/fonts/**/*.{woff,woff2}",
       "./source/img/**",
@@ -62,7 +88,6 @@ gulp.task("copy", (done) => {
       base: "source"
     })
     .pipe(gulp.dest("./build"));
-  done();
 });
 
 // удаление файлов и директорий
@@ -88,7 +113,7 @@ gulp.task("html", () => {
       // collapseWhitespace: true,
       removeComments: true
     }))
-    .pipe(gulp.dest("build/"));
+    .pipe(gulp.dest("./build"));
 });
 
 // живой сервер
@@ -110,7 +135,7 @@ gulp.task("browser-sync", () => {
 
 // IMGs
 // images processing в source
-gulp.task("images", (done) => {
+gulp.task("images", async () => {
   gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({
@@ -122,17 +147,15 @@ gulp.task("images", (done) => {
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("./source/img"));
-  done();
 });
 
 // преобразуем необходимые изображения в webp в source
-gulp.task("webp", (done) => {
+gulp.task("webp", async () => {
   gulp.src("./source/img/**/*.{png,jpg}")
     .pipe(webp({
       quality: 90
     }))
     .pipe(gulp.dest("./build/img"));
-  done();
 });
 
 
@@ -182,31 +205,22 @@ gulp.task("serve", () => {
     server: "./build",
     notify: false,
     port: 3000
-  });
+  })
 
-  gulp.watch("./source/sass/**/*.scss", gulp.series("styling"));
-  gulp.watch("./source/js/**/*.js", gulp.series("scripts"));
-  gulp.watch("./source/*.html", gulp.series("html")).on("change", browserSync.reload);
-});
-
-
+  gulp.watch("./source/sass/**/*.scss", gulp.series("styling"))
+  gulp.watch("./source/js/**/*.js", gulp.series("scripts"))
+  gulp.watch("./source/**/*.html", gulp.series("html")).on("change", browserSync.reload)
+})
 
 
 
 
-// набор 1
-// gulp.task("build",
-//   gulp.series("clean",
-//     gulp.parallel(
-//       gulp.series("images", "webp"),
-//       "styling", "scripts"),
-//     "copy",
-//     "svg-sprite",
-//     "html"
-//   ));
 
 
-// набор 2
+
+
+
+// final
 gulp.task("build",
   gulp.series("clean",
     gulp.parallel(
@@ -216,6 +230,7 @@ gulp.task("build",
     ),
     "copy",
     gulp.parallel("svg-sprite", "webp"),
-    "html"
+    "html",
+    "critical"
   )
 );
