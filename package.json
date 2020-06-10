@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "cat-energy",
   "version": "1.0.0",
   "description": "no description",
@@ -11,26 +12,26 @@
     "del": "^4.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^6.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svgstore": "^7.0.1",
     "gulp-terser": "^1.2.0",
     "gulp-watch": "^5.0.1",
     "gulp-webp": "^4.0.1",
     "node-sass": "^4.14.1",
-    "posthtml-include": "^1.3.3"
+    "posthtml-include": "^1.4.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "start": "npm run build && gulp server"
   },
   "dependencies": {
     "sharp": "^0.22.1"

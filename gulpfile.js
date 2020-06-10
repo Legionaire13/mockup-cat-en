@@ -1,5 +1,4 @@
 "use strict";
-// modules
 const gulp = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
@@ -23,212 +22,245 @@ const terser = require("gulp-terser");
 // const responsive = require('gulp-responsive');
 
 // tasks
-// подготовка css
-gulp.task("styling", async () => {
-  gulp
-    .src(
-      [
-        "./source/normalize/normalize.css",
-        "./source/sass/variables.scss",
-        "./source/sass/style.scss",
-        "./source/sass/mixins.scss",
-        "./source/sass/blocks/**/*.scss"
-      ],
-      {
-        allowEmpty: true
-      }
-    )
+// CSS
+const styles = () => {
+  const config = {
+    src: [
+      "./source/normalize/normalize.css",
+      "./source/sass/variables.scss",
+      "./source/sass/style.scss",
+      "./source/sass/mixins.scss",
+      "./source/sass/blocks/**/*.scss",
+    ],
+    dest: "./build/css",
+    fileName: "style.min.scss",
+  };
+
+  return gulp
+    .src(config.src, {
+      allowEmpty: true,
+    })
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(concat("style.min.scss"))
+    .pipe(concat(config.fileName))
     .pipe(
       sass({
-        outputStyle: "compressed"
+        outputStyle: "compressed",
       })
     )
     .pipe(autoprefixer())
     .pipe(cleanCSS())
     .pipe(sourcemaps.write("./"))
     .pipe(plumber.stop())
-    .pipe(gulp.dest("./build/css"))
+    .pipe(gulp.dest(config.dest))
     .pipe(browserSync.stream());
-});
+};
+exports.styles = styles;
 
-//critical css
-// gulp.task("critical", async () => {
-//   critical.generate({
-//       inline: true,
-//       base: './build',
-//       src: 'index.html',
-//       css: ['./build/css/style.min.css'],
-//       dest: './index.html',
-//       minify: true,
-//       width: 320,
-//       height: 480
-//   })
-// })
 // Generate & Inline Critical-path CSS
-gulp.task("critical", async () => {
+const criticalCss = () => {
+  const config = {
+    src: "./build/*.html",
+    dest: "./build",
+  };
+
   return gulp
-    .src("./build/*.html")
+    .src(config.src)
     .pipe(
       critical({
         base: "./build",
-        inline: true
+        inline: true,
       })
     )
-    .on("error", err => {
+    .on("error", (err) => {
       log.error(err.message);
     })
-    .pipe(gulp.dest("./build"));
-});
+    .pipe(gulp.dest(config.dest));
+};
+exports.criticalCss = criticalCss;
 
-// Копирование
-gulp.task("copy", async () => {
-  gulp
-    .src(
-      [
-        "./source/fonts/**/*.{woff,woff2}",
-        "./source/img/**",
-        "./source/robots.txt",
-        "./source/favicon.png"
-        // "./source/js/**",
-        // ".source/*.html"
-      ],
-      {
-        base: "source"
-      }
-    )
-    .pipe(gulp.dest("./build"));
-});
+// Copy
+const copy = () => {
+  const config = {
+    src: [
+      "./source/fonts/**/*.{woff,woff2}",
+      "./source/img/**",
+      "./source/robots.txt",
+      "./source/favicon.png",
+      // "./source/js/**",
+      // ".source/*.html"
+    ],
+    dest: "./build",
+  };
 
-// удаление файлов и директорий
-gulp.task("clean", () => del("build/*"));
-
-// сборка спрайта
-gulp.task("svg-sprite", () => {
   return gulp
-    .src("./source/img/icon-*.svg")
+    .src(config.src, {
+      base: "source",
+    })
+    .pipe(gulp.dest(config.dest));
+};
+exports.copy = copy;
+
+// deliting files and dir's
+const clean = () => del("./build");
+exports.clean = clean;
+
+// SVG sprite creator
+const createSVGSprite = () => {
+  const config = {
+    src: "./source/img/icon-*.svg",
+    dest: "./build/img",
+  };
+
+  return gulp
+    .src(config.src)
     .pipe(
       svgstore({
-        inlineSvg: true
+        inlineSvg: true,
       })
     )
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("./build/img"));
-});
+    .pipe(gulp.dest(config.dest));
+};
+exports.createSVGSprite = createSVGSprite;
 
-// обработка html
-gulp.task("html", () => {
+// posthtml processing
+const html = () => {
+  const config = {
+    src: "./source/*.html",
+    dest: "./build",
+  };
+
   return gulp
-    .src("./source/*.html")
+    .src(config.src)
     .pipe(posthtml([include()]))
     .pipe(
       htmlmin({
         // collapseWhitespace: true,
-        removeComments: true
+        removeComments: true,
       })
     )
-    .pipe(gulp.dest("./build"));
-});
+    .pipe(gulp.dest(config.dest));
+};
+exports.html = html;
 
-// живой сервер
-gulp.task("browser-sync", () => {
-  browserSync({
+// browser-sync
+const bSyncServer = () => {
+  return bSyncServer({
     notify: false,
     server: {
       baseDir: "./build",
-      port: 3000
-    }
+      port: 3000,
+    },
   });
-});
+};
+exports.bSyncServer = bSyncServer;
 
 // IMGs
 // images processing в source
-gulp.task("images", async () => {
-  gulp
-    .src("source/img/**/*.{png,jpg,svg,PNG,JPG,SVG}")
+const imgOptimization = () => {
+  const config = {
+    src: "source/img/**/*.{png,jpg,svg,PNG,JPG,SVG}",
+    dest: "./source/img",
+  };
+
+  return gulp
+    .src(config.src)
     .pipe(
       imagemin([
         imagemin.optipng({
-          optimizationLevel: 3
+          optimizationLevel: 3,
         }),
         imagemin.jpegtran({
-          progressive: true
+          progressive: true,
         }),
-        imagemin.svgo()
+        imagemin.svgo(),
       ])
     )
-    .pipe(gulp.dest("./source/img"));
-});
+    .pipe(gulp.dest(config.dest));
+};
+exports.imgOptimization = imgOptimization;
 
-// преобразуем необходимые изображения в webp в source
-gulp.task("webp", async () => {
-  gulp
-    .src("./source/img/**/*.{png,jpg}")
+const createWebp = () => {
+  const config = {
+    src: "./source/img/**/*.{png,jpg}",
+    dest: "./build/img",
+  };
+
+  return gulp
+    .src(config.src)
     .pipe(
       webp({
-        quality: 90
+        quality: 90,
       })
     )
-    .pipe(gulp.dest("./build/img"));
-});
+    .pipe(gulp.dest(config.dest));
+};
+exports.createWebp = createWebp;
 
 // responsive images
-// gulp.task('respimg', function () {
-//   return gulp.src('source/img/*.{png,jpg}')
-//     .pipe(responsive({
-//       'bg-*.jpg': {
-//         width: 600,
-//         height: 360,
-//         progressive: true
-//       }
-//     }))
-//     .pipe(gulp.dest('build/respimg'));
-// });
+// export const respImgsProsessing = () => {
+//   return gulp
+//     .src("source/img/*.{png,jpg}")
+//     .pipe(
+//       responsive({
+//         "bg-*.jpg": {
+//           width: 600,
+//           height: 360,
+//           progressive: true,
+//         },
+//       })
+//     )
+//     .pipe(gulp.dest("build/respimg"));
+// };
 
-// JS
-gulp.task("scripts", () => {
-  return gulp
-    .src("./source/js/**/*.js")
-    .pipe(sourcemaps.init())
-    .pipe(concat("scripts.js"))
-    .pipe(terser())
-    .pipe(
-      rename({
-        prefix: "",
-        suffix: ".min"
-      })
-    )
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest("./build/js"));
-});
+// JS scripts optimizaton
+// export const scripts = () => {
+//   return gulp
+//     .src("./source/js/**/*.js")
+//     .pipe(sourcemaps.init())
+//     .pipe(concat("scripts.js"))
+//     .pipe(terser())
+//     .pipe(
+//       rename({
+//         prefix: "",
+//         suffix: ".min",
+//       })
+//     )
+//     .pipe(sourcemaps.write("./"))
+//     .pipe(gulp.dest("./build/js"));
+// };
 
 // watchers
-gulp.task("serve", () => {
+const server = async () => {
   browserSync.init({
     browser: "chrome",
     server: "./build",
     notify: false,
-    port: 3000
+    port: 3000,
   });
 
-  gulp.watch("./source/sass/**/*.scss", gulp.series("styling"));
-  gulp.watch("./source/js/**/*.js", gulp.series("scripts"));
-  gulp
-    .watch("./source/**/*.html", gulp.series("html"))
-    .on("change", browserSync.reload);
-});
+  const src = {
+    styles: "./source/sass/**/*.scss",
+    scripts: "./source/js/**/*.js",
+    html: "./source/**/*.html",
+  };
 
-// final
-gulp.task(
-  "build",
-  gulp.series(
-    "clean",
-    gulp.parallel("images", "styling", "scripts"),
-    "copy",
-    gulp.parallel("svg-sprite", "webp"),
-    "html",
-    "critical"
-  )
+  gulp.watch(src.styles, gulp.series(styles));
+  // gulp.watch(src.js, gulp.series(scripts));
+  gulp.watch(src.html, gulp.series(html)).on("change", browserSync.reload);
+};
+exports.server = server;
+
+const build = gulp.series(
+  clean,
+  gulp.parallel(imgOptimization, styles),
+  copy,
+  gulp.parallel(createSVGSprite, createWebp),
+  html,
+  criticalCss
 );
+exports.build = build;
+
+// default
+exports.default = build;
