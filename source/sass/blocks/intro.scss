@@ -47,14 +47,14 @@
   font-family: $font-family;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 300;
+  font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
+  text-decoration: none;
 
   display: block;
 
   background: $intro-button;
-  text-decoration: none;
 
   min-width: 260px;
   max-width: 425px;
@@ -64,22 +64,14 @@
 
 // retina mobile
 @media screen and (max-width: 767px) and (min-resolution: 1.5dppx) {
-
   .intro__wrapper {
     background: url(../img/index-bg-mobile@2x.jpg) no-repeat 50% 0%;
     background-size: contain;
   }
-
 }
-
-
-
-
-
 
 //       tablet
 @media screen and (min-width: $tablet-width) {
-
   .intro {
     max-width: 768px;
     min-height: 806px;
@@ -149,8 +141,7 @@
     min-height: 27px;
 
     order: -1;
-
-    transition: all 0.3s;
+    transition: background-color 0.3s;
 
     // состояния аналогичные button
     &:hover {
@@ -164,15 +155,10 @@
       color: $intro-button-text-focus;
     }
   }
-
 }
-
-
-
 
 //      desktop
 @media screen and (min-width: $desktop-width) {
-
   .intro {
     max-width: 100%;
     min-height: 0px;
@@ -219,5 +205,4 @@
     min-width: 228px; // pp
     min-height: 30px; // pp
   }
-
 }

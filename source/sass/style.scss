@@ -1,14 +1,14 @@
 @font-face {
-  font-style: normal;
-  font-weight: normal;
   font-family: "Oswald Regular";
+  font-weight: normal;
+  font-style: normal;
   src: url("../fonts/Oswald_reg_med.woff2") format("woff2"),
     url("../fonts/Oswald_reg_med.woff") format("woff");
 }
 
 @font-face {
   font-family: "Oswald Medium";
-  font-weight: medium;
+  font-weight: 500;
   font-style: normal;
   src: url("../fonts/Oswald_reg_med.woff2") format("woff2"),
     url("../fonts/Oswald_reg_med.woff") format("woff");
