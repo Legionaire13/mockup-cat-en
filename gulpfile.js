@@ -15,10 +15,10 @@ const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const svgstore = require("gulp-svgstore");
+const terser = require("gulp-terser");
 const webp = require("gulp-webp");
 sass.compiler = require("node-sass");
 
-const terser = require("gulp-terser");
 // const responsive = require('gulp-responsive');
 
 // tasks
@@ -87,7 +87,7 @@ const copy = () => {
       "./source/img/**",
       "./source/robots.txt",
       "./source/favicon.png",
-      // "./source/js/**",
+      // "./source/js/**/*.js",
       // ".source/*.html"
     ],
     dest: "./build",
@@ -215,21 +215,22 @@ exports.createWebp = createWebp;
 // };
 
 // JS scripts optimizaton
-// export const scripts = () => {
-//   return gulp
-//     .src("./source/js/**/*.js")
-//     .pipe(sourcemaps.init())
-//     .pipe(concat("scripts.js"))
-//     .pipe(terser())
-//     .pipe(
-//       rename({
-//         prefix: "",
-//         suffix: ".min",
-//       })
-//     )
-//     .pipe(sourcemaps.write("./"))
-//     .pipe(gulp.dest("./build/js"));
-// };
+const scripts = () => {
+  return gulp
+    .src("./source/js/**/*.js")
+    .pipe(sourcemaps.init())
+    .pipe(concat("scripts.js"))
+    .pipe(terser())
+    .pipe(
+      rename({
+        prefix: "",
+        suffix: ".min",
+      })
+    )
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest("./build/js"));
+};
+exports.scripts = scripts;
 
 // watchers
 const server = async () => {
@@ -242,19 +243,19 @@ const server = async () => {
 
   const src = {
     styles: "./source/sass/**/*.scss",
-    scripts: "./source/js/**/*.js",
+    js: "./source/js/**/*.js",
     html: "./source/**/*.html",
   };
 
   gulp.watch(src.styles, gulp.series(styles));
-  // gulp.watch(src.js, gulp.series(scripts));
+  gulp.watch(src.js, gulp.series(scripts));
   gulp.watch(src.html, gulp.series(html)).on("change", browserSync.reload);
 };
 exports.server = server;
 
 const build = gulp.series(
   clean,
-  gulp.parallel(imgOptimization, styles),
+  gulp.parallel(imgOptimization, styles, scripts),
   copy,
   gulp.parallel(createSVGSprite, createWebp),
   html,
