@@ -5,7 +5,6 @@
 *.pdf
 *.psd
 *.sublime*
-*mockup/
 build/
 node_modules/
 source/css/*.css
