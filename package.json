@@ -26,14 +26,12 @@
     "gulp-watch": "^5.0.1",
     "gulp-webp": "^4.0.1",
     "node-sass": "^4.14.1",
-    "posthtml-include": "^1.4.3"
+    "posthtml-include": "^1.4.3",
+    "sharp": "^0.28.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
     "start": "npm run build && gulp server"
-  },
-  "dependencies": {
-    "sharp": "^0.22.1"
   }
 }
